@@ -1,0 +1,11 @@
+import React from 'react'
+// import Link from 'gatsby-link'
+import './header.css'
+
+export default () => (
+    <header className="header-sayless">
+      <div className="header-container">
+        <h1 className="header-text">Say Less Design Studio is Quisque congue tincidunt lacinia dolor.</h1>
+      </div>
+    </header>
+)
