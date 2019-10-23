@@ -6,11 +6,68 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Canela';
+  src: url('../assets/fonts/canela/Canela-Regular.woff2') format('woff2'),
+  url('../assets/fonts/canela/Canela-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Altero';
+  src: url('../assets/fonts/altero/Altero-Regular.woff2') format('woff2'),
+  url('../assets/fonts/altero/Altero-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Untitled Sans';
+  src: url('../assets/fonts/untitled-sans/UntitledSans-LightItalic.woff2') format('woff2'),
+  url('../assets/fonts/untitled-sans/UntitledSans-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Untitled Sans';
+  src: url('../assets/fonts/untitled-sans/UntitledSans-Light.woff2') format('woff2'),
+  url('../assets/fonts/untitled-sans/UntitledSans-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Untitled Sans';
+  src: url('../assets/fonts/untitled-sans/UntitledSans-BoldItalic.woff2') format('woff2'),
+  url('../assets/fonts/untitled-sans/UntitledSans-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Untitled Sans';
+  src: url('../assets/fonts/untitled-sans/UntitledSans-MediumItalic.woff2') format('woff2'),
+  url('../assets/fonts/untitled-sans/UntitledSans-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Untitled Sans';
+  src: url('../assets/fonts/untitled-sans/UntitledSans-Bold.woff2') format('woff2'),
+  url('../assets/fonts/untitled-sans/UntitledSans-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
 body {
   font-family: "Avenir", Tahoma, Arial, Helvetica, sans-serif;
   font-size: 1em;
   line-height: 1.65;
-  color: #373F49;
+  /*color: #373F49;*/
+  color: rgb(166, 126, 46);
   background: #eee;
   margin: 0;
 }
@@ -25,6 +82,13 @@ h2,
 h3 {
   font-size: 2em;
   font-weight: normal;
+  font-family: "Canela", Tahoma, Arial, Helvetica, sans-serif;
+  color: rgb(166, 126, 46);
+}
+
+h4 {
+  font-family: "Altero", Tahoma, Arial, Helvetica, sans-serif;
+  letter-spacing: 4px;
 }
 
 a {

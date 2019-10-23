@@ -1,51 +1,81 @@
-.hero {
-    position: relative;
-    background: #000;
-    color: #fff;
-    text-align: center;
+.about-title {
+    font-size: 4em;
 }
 
-.heroImage {
-    /*
-      Ensure golden ratio for the hero size while limiting it to some extend to
-      the viewport width
-    */
-    height: 61.8vh;
-    max-height: 400px;
+.video-container {
+    height: 400px;
+    width: auto;
+    background-color: lightgray;
 }
 
-.heroDetails {
-    position: absolute;
-    background: rgba(0, 0, 0, 0.7);
-    left: 50%;
-    bottom: 0;
-    transform: translate(-50%, 0);
-    font-size: 14px;
-    padding: 0 0.5em;
+.about-capabilities-ul {
+    display: flex;
+    flex-direction: row;
+    padding-inline-start: 0px;
+    list-style-type: none;
+    flex-wrap: wrap;
 }
 
-@media(min-width: 600px) {
-    .heroDetails {
-        font-size: 16px;
-    }
+.about-capabilities-li {
+    list-style: none;
+    flex: 0 0 33.333333%;
 }
 
-@media(min-width: 1000px) {
-    .heroDetails {
-        font-size: 20px;
-    }
+.about-person-container {
+    display: flex;
+    flex-direction: row;
 }
 
-.heroHeadline {
+.about-person-name-container {
+    writing-mode: tb-rl;
+    transform: rotate(-180deg);
+}
+
+.about-person-name {
     margin: 0;
+    font-size: 4em;
 }
 
-.heroTitle {
-    margin: 0;
-    font-size: 1.125em;
-    font-weight: bold;
+.about-person-bio {
+    margin: 10px 0;
 }
 
-.about-container {
-    background-color: blue;
+.about-person-title {
+    text-transform: uppercase;
+}
+
+.about-person-insta, .about-person-website {
+    font-family: "Untitled Sans", serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.about-person-website a, .about-person-insta a {
+    text-decoration: none;
+}
+
+
+
+.about-person-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.about-person-right {
+    width: 50%;
+}
+
+
+hr {
+    margin: 50px 0px;
+}
+
+
+@media(min-width: 1024px) {
+    .about-description {
+        padding-right: 15em;
+    }
 }
