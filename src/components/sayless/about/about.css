@@ -21,7 +21,12 @@
     flex: 0 0 33.333333%;
 }
 
-.about-person-container {
+.about-person-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-person-contents {
     display: flex;
     flex-direction: row;
 }
@@ -29,6 +34,7 @@
 .about-person-name-container {
     writing-mode: tb-rl;
     transform: rotate(-180deg);
+    padding-top: 5em;
 }
 
 .about-person-name {
@@ -38,6 +44,7 @@
 
 .about-person-bio {
     margin: 10px 0;
+    padding-bottom: 2em;
 }
 
 .about-person-title {
@@ -46,7 +53,7 @@
 
 .about-person-insta, .about-person-website {
     font-family: "Untitled Sans", serif;
-    font-weight: 300;
+    font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
 }
@@ -55,17 +62,30 @@
     text-decoration: none;
 }
 
-
-
 .about-person-left {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 50%;
+    margin-right: 2em;
+    padding-right: 1em;
+    width: 45%;
 }
 
 .about-person-right {
-    width: 50%;
+    margin-left: 2em;
+    width: 55%;
+}
+
+.about-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.arrow {
+    max-width: 2rem;
+    padding: 0.5rem;
+    margin-top: 1em;
 }
 
 

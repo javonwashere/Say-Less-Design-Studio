@@ -33,11 +33,11 @@ const aboutMeParentComponent = (data) => {
   const aboutUsPeople = data.allContentfulPerson.edges;
   return (
       <div className="wrapper">
-        <h1 className="about-title">{aboutUsTitle}</h1>
-        <p className="about-description">{aboutUsDescription}</p>
-        <div className="video-container">video container</div>
-        <div>{addStylingToCapabilities(aboutUsCapabilities)}</div>
-        <hr/>
+        {/*<h1 className="about-title">{aboutUsTitle}</h1>*/}
+        {/*<p className="about-description">{aboutUsDescription}</p>*/}
+        {/*<div className="video-container">video container</div>*/}
+        {/*<div>{addStylingToCapabilities(aboutUsCapabilities)}</div>*/}
+        {/*<hr/>*/}
         <People className="about-people" people={aboutUsPeople}/>
       </div>
   )
