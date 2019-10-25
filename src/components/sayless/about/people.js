@@ -1,33 +1,60 @@
-import React, { useState } from "react";
+import { render } from 'react-dom'
 import Person from "./person"
-
+import React, { useState, useCallback } from 'react'
+import { useTransition, animated } from 'react-spring'
+import './about.css'
 
 export default ({ people }) => {
   const [person, setPerson] = useState(people[0]);
-  let index = 0;
+
+  let allPeople = people.map((person) => {
+    return ({ style }) =>
+        <animated.div style={{...style, position: 'relative'}}>
+          <Person
+              className="about-person-object"
+              person={person}
+              handleRightClick={onRightClick}
+              handleLeftClick={onLeftClick}
+          />
+        </animated.div>
+  });
+  // console.log("allpeople", allPeople)
+
+  let indexP = 0;
   const nextPerson = () => {
-    index = index + 1; // increase i by one
-    index = index % people.length; // if we've gone too high, start from `0` again
-    return setPerson(people[index]); // give us back the item of where we are now
+    indexP = indexP + 1; // increase i by one
+    indexP = indexP % people.length; // if we've gone too high, start from `0` again
+    return setPerson(people[indexP]); // give us back the item of where we are now
   }
 
   const previousPerson = () => {
-    if (index === 0) { // i would become 0
-      index = people.length; // so put it at the other end of the array
+    if (indexP === 0) { // i would become 0
+      indexP = people.length; // so put it at the other end of the array
     }
-    index = index - 1; // decrease by one
-    return setPerson(people[index]); // give us back the item of where we are now
+    indexP = indexP - 1; // decrease by one
+    return setPerson(people[indexP]); // give us back the item of where we are now
   }
 
+
+
+
+
+  const [index, set] = useState(0);
+  const onRightClick = useCallback(() => set(state => (state + 1) % allPeople.length), [])
+  const onLeftClick = useCallback(() => set(state => (state + 1) % allPeople.length), [])
+  const transitions = useTransition(index, p => p, {
+    leave: { opacity: 0 },
+  })
+
+
+
   return (
-      <div>
-      <Person className="about-person-object"
-              person={person}
-              handleRightClick={nextPerson}
-              handleLeftClick={previousPerson}
-      />
+      <div className="about-people-container">
+        {transitions.map(({ item, props, key }) => {
+          const ThisPerson = allPeople[item]
+          return <ThisPerson key={key} style={props} />
+        })}
       </div>
   )
 }
-
 
