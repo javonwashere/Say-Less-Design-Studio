@@ -29,7 +29,7 @@ export default () => {
           </Transition>
     }
     <container className="nav-container">
-    <ul className="navigation">
+    <ul className="navigationList">
       <li className="navigationItem">
         <Link style={{ zIndex: 1000 }} to="/"><img className="sayless-symbol navigationButton" src={SaylessSymbol}/></Link>
       </li>

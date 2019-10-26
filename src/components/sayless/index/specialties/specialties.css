@@ -1,7 +1,7 @@
 .specialties-container {
     display: flex;
     margin-top: 10vh;
-}
+    }
 
 .specialties-grid {
     display: grid;
@@ -53,11 +53,12 @@
 
 .specialties-title {
     justify-self: start;
-    font-size: 1em;
+    font-size: 1.2vw;
 }
 
 .inner-text {
     transform: translateY(-1em);
+    font-size: 0.9vw;
 }
 
 div sup {

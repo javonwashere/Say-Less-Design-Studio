@@ -11,15 +11,12 @@
 }
 
 .sayless-symbol {
-  max-width: 100px;
+  max-width: 6vw;
+  transform: translateY(1vw)
 }
 
-.menu-bar {
-  width: 35px;
-  height: 5px;
-  background-color: rgb(166, 126, 46);
-  margin: 6px 0;
-}
+
+
 
 .menu-container {
   position: fixed;
@@ -78,12 +75,22 @@
   justify-content: space-between;
   max-width: 60em;
   margin: auto;
+  background-color: white;
+  align-items: flex-end;
+}
+
+.nav-container {
+  max-width: 1180px;
 }
 
 .navigationItem {
   display: inline-flex;
   align-items: center;
   margin: 0 1em;
+}
+
+.navigationButton {
+  padding-right: 40px;
 }
 
 .menu-item {
@@ -126,4 +133,75 @@
 
 .navigationButton {
   z-index: 1000;
+}
+
+
+@media screen and (max-width: 400px) {
+  .menu-bar {
+    width: 17px;
+    height: 2px;
+    background-color: rgb(166, 126, 46);
+    margin: 4px 0;
+  }
+
+  .sayless-symbol {
+    max-width: 8vw;
+    transform: translateY(2.5vw)
+  }
+}
+
+
+@media screen and (min-width: 401px) and (max-width: 720px) {
+  .menu-bar {
+    width: 33px;
+    height: 4px;
+    background-color: rgb(166, 126, 46);
+    margin: 5px 0;
+  }
+
+  .sayless-symbol {
+    max-width: 10vw;
+    transform: translateY(2.5vw)
+  }
+}
+
+@media screen and (min-width: 721px) and (max-width: 1280px) {
+  .menu-bar {
+    width: 35px;
+    height: 5px;
+    background-color: rgb(166, 126, 46);
+    margin: 6px 0;
+  }
+
+  .sayless-symbol {
+    max-width: 8vw;
+    transform: translateY(2.5vw)
+  }
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1440px) {
+  .menu-bar {
+    width: 35px;
+    height: 5px;
+    background-color: rgb(166, 126, 46);
+    margin: 6px 0;
+  }
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+  .menu-bar {
+    width: 35px;
+    height: 5px;
+    background-color: rgb(166, 126, 46);
+    margin: 6px 0;
+  }
+}
+
+@media screen and (min-width: 1921px) {
+  .menu-bar {
+    width: 35px;
+    height: 5px;
+    background-color: rgb(166, 126, 46);
+    margin: 6px 0;
+  }
 }

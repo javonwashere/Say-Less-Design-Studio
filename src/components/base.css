@@ -1,10 +1,10 @@
-@font-face {
-  font-family: "Avenir";
-  font-weight: 400;
-  font-style: normal;
-  src: url("/avenir-400.woff2") format("woff2");
-  font-display: swap;
-}
+/*@font-face {*/
+  /*font-family: "Avenir";*/
+  /*font-weight: 400;*/
+  /*font-style: normal;*/
+  /*src: url("/avenir-400.woff2") format("woff2");*/
+  /*font-display: swap;*/
+/*}*/
 
 @font-face {
   font-family: 'Canela';
@@ -61,6 +61,32 @@
   font-weight: bold;
   font-style: normal;
 }
+
+
+@media screen and (max-width: 400px) {
+
+}
+
+@media screen and (min-width: 401px) and (max-width: 720px) {
+
+}
+
+@media screen and (min-width: 721px) and (max-width: 1280px) {
+
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1440px) {
+
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+
+}
+
+@media screen and (min-width: 1921px) {
+
+}
+
 
 body {
   font-family: "Avenir", Tahoma, Arial, Helvetica, sans-serif;
@@ -147,3 +173,5 @@ a {
 .list-inline li {
   display: inline-block;
 }
+
+

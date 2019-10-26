@@ -8,11 +8,11 @@
 }
 
 .header-container{
-    padding: 0em 2em;
+    /*padding: 0em 2em;*/
     font-size: 1.5em;
 }
 
 .header-text {
-    font-size: 5rem;
-    padding-left: 1em;
+    font-size: 5.1vw;
+    line-height: 68%;
 }

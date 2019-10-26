@@ -12,8 +12,9 @@ export default () => {
     config,
     opacity: toggle ? 1 : 0,
     x: toggle ? 0 : 20,
-    height: toggle ? 80 : 0,
-    from: { opacity: 0, x: 20, height: 0 },
+    // height: toggle ? 10 : 0,
+    minHeight: toggle ? "100%" : "0%",
+    from: { opacity: 0, x: 20, minHeight: "0" },
   })
 
   return (
