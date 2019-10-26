@@ -8,7 +8,7 @@ import AboutUs from "../../../../../src/assets/icons/about-us.png"
 export default () =>  {
   return (
     <StaticQuery
-        query={specialtiesQuery}
+        query={pageQuery}
         render={data => {
           return specialtiesComponent(data);
         }}
@@ -74,7 +74,7 @@ const specialtiesComponent = (data) => {
   )
 }
 
-export const specialtiesQuery = graphql`
+export const pageQuery = graphql`
   query specialtiesQuery {
   allContentfulSpecialties {
     nodes {

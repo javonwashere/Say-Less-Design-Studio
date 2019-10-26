@@ -65,7 +65,7 @@ export default AboutUs;
 
 
 export const pageQuery = graphql`
-  query AboutQuery {
+  query aboutQuery {
     site {
       siteMetadata {
         title
