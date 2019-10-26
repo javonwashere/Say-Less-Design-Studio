@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 import Hero from '../components/hero'
 import About from '../components/sayless/about/about'
 import Header from '../components/sayless/header/header'
+import Specialties from '../components/sayless/index/specialties/specialties'
 import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
 
@@ -20,6 +21,7 @@ class RootIndex extends React.Component {
         <div style={{ background: '#fff' }}>
           <Helmet title={siteTitle} />
           <Header />
+          <Specialties />
           {/*<About />*/}
           {/*<div className="wrapper">*/}
             {/*<h2 className="section-headline">Recent articles</h2>*/}
