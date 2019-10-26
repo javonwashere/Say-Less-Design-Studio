@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useRef} from "react";
 import {Link} from "gatsby";
 
 
@@ -9,13 +9,22 @@ import {Link} from "gatsby";
 
 
 export default ({ style }) =>  {
+  const menuContainer = useRef();
+  useEffect(()=> {
+    menuContainer.current.addEventListener('touchmove', function(e) {
 
+      e.preventDefault();
+
+    }, false);
+  })
+
+  console.log(menuContainer)
 
   // this function splits the first and last name onto separate lines
 
 
   return (
-      <div style={style} className="menu-container">
+      <div ref={menuContainer} style={style} className="menu-container">
         <div className="menu-items">
           <h1 className="menu-item">
             <Link style={{textDecoration: "none"}} to={`/aboutus`}>The Studio</Link>
