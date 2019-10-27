@@ -11,8 +11,9 @@
 }
 
 .specialties-left {
-    width: 50%;
-    height: 100%;
+    width: 40%;
+    height: 80%;
+    padding-right: 10vw;
 }
 
 .specialties-right {
@@ -21,10 +22,6 @@
     display: flex;
     flex-direction: column;
     width: 50%;
-}
-
-.specialties-left, .specialties-left {
-    padding: 3em;
 }
 
 .specialty-child, .specialty-child-title {
@@ -38,10 +35,11 @@
 }
 
 .specialty-child-about-us {
-    padding-top: 5em;
-    max-width: 5rem;
+    align-self: center;
+    max-width: 5vw;
     justify-self: end;
     grid-template-rows: .5fr;
+    padding-right: 2vw;
 }
 
 .specialty-item-detail-left, .specialty-item-detail-right {
@@ -58,7 +56,7 @@
 
 .inner-text {
     transform: translateY(-1em);
-    font-size: 0.9vw;
+    font-size: 1vw;
 }
 
 div sup {
@@ -71,4 +69,46 @@ div sup {
 
 .specialties-img {
     position: relative;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 400px) {
+    .specialties-left {
+        padding-right: 2vw;
+    }
+    .inner-text {
+        font-size: 1.9vw;
+    }
+    .specialty-child-about-us {
+        max-width: 10vw;
+    }
+}
+
+@media screen and (min-width: 401px) and (max-width: 720px) {
+    .specialties-left {
+        padding-right: 8vw;
+    }
+
+}
+
+@media screen and (min-width: 721px) and (max-width: 1280px) {
+
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1440px) {
+
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+
+
+}
+
+@media screen and (min-width: 1921px) {
 }

@@ -11,7 +11,7 @@
 }
 
 .sayless-symbol {
-  max-width: 6vw;
+  max-width: 3.2vw;
   transform: translateY(1vw)
 }
 
@@ -60,6 +60,7 @@
 .menu-items {
   margin: auto;
   list-style: none;
+  line-height: 50%;
   justify-content: space-evenly;
   display: flex;
   flex-direction: column;
@@ -86,7 +87,6 @@
 .navigationItem {
   display: inline-flex;
   align-items: center;
-  margin: 0 1em;
 }
 
 .navigationButton {
@@ -148,6 +148,10 @@
     max-width: 8vw;
     transform: translateY(2.5vw)
   }
+
+  .menu-items {
+    font-size: 100%;
+  }
 }
 
 
@@ -163,6 +167,10 @@
     max-width: 10vw;
     transform: translateY(2.5vw)
   }
+
+  .menu-items {
+    font-size: 100%;
+  }
 }
 
 @media screen and (min-width: 721px) and (max-width: 1280px) {
@@ -176,6 +184,10 @@
   .sayless-symbol {
     max-width: 8vw;
     transform: translateY(2.5vw)
+  }
+
+  .menu-items {
+    font-size: 100%;
   }
 }
 

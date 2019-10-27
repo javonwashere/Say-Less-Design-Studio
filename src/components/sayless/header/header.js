@@ -3,10 +3,12 @@ import { render } from 'react-dom'
 import { useTrail, animated } from 'react-spring'
 import './header.css'
 
-const items = ['Say Less Design Studio is', 'Quisque congue tincidunt', 'lacinia dolor.'];
 const config = { mass: 5, tension: 1000, friction: 200 };
 
-export default () => {
+export default ({ headerText }) => {
+
+  const items = headerText.split("\n");
+
   const [toggle, set] = useState(true);
   const trail = useTrail(items.length, {
     config,
