@@ -23,8 +23,8 @@ export default () => {
             leave={{ opacity: 0 }}>
           {menuToggle =>
               menuToggle
-                  ? props => ""
-                  : props => <Menu style={props} />
+                  ? props => <div style={props}></div>
+                  : props => <Menu style={props} toggleMenu={toggleMenu} />
           }
           </Transition>
     }

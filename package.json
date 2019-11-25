@@ -49,6 +49,7 @@
     "url": "git+https://github.com/contentful-userland/gatsby-contentful-starter.git"
   },
   "scripts": {
+    "clean": "gatsby clean",
     "dev": "npm run develop",
     "develop": "gatsby develop",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",

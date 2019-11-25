@@ -94,7 +94,7 @@ body {
   line-height: 1.65;
   /*color: #373F49;*/
   color: rgb(166, 126, 46);
-  background: #eee;
+  background: white;
   margin: 0;
   /*animation: fadeInAnimation ease .5s;*/
   animation-iteration-count: 1;

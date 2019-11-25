@@ -2,12 +2,10 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
-import Hero from '../components/hero'
-import About from '../components/sayless/about/about'
 import Header from '../components/sayless/header/header'
 import Specialties from '../components/sayless/index/specialties/specialties'
+import FeaturedWorks from '../components/sayless/index/featured-works/featured-works'
 import Layout from '../components/layout'
-import ArticlePreview from '../components/article-preview'
 
 class RootIndex extends React.Component {
   render() {
@@ -17,26 +15,13 @@ class RootIndex extends React.Component {
     console.log(get(this, "props"));
 
 
-    console.log(headerText)
     return (
       <Layout location={this.props.location} >
         <div style={{ background: '#fff' }}>
           <Helmet title={siteTitle} />
           <Header headerText={headerText} />
           <Specialties />
-          {/*<About />*/}
-          {/*<div className="wrapper">*/}
-            {/*<h2 className="section-headline">Recent articles</h2>*/}
-            {/*<ul className="article-list">*/}
-              {/*{posts.map(({ node }) => {*/}
-                {/*return (*/}
-                  {/*<li key={node.slug}>*/}
-                    {/*<ArticlePreview article={node} />*/}
-                  {/*</li>*/}
-                {/*)*/}
-              {/*})}*/}
-            {/*</ul>*/}
-          {/*</div>*/}
+          <FeaturedWorks />
         </div>
       </Layout>
     )
