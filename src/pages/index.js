@@ -7,6 +7,7 @@ import Specialties from '../components/sayless/index/specialties/specialties'
 import FeaturedWorks from '../components/sayless/index/featured-works/featured-works'
 import Layout from '../components/layout'
 
+
 class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title');

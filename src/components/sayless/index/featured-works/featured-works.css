@@ -31,6 +31,13 @@
     border-bottom: 2px solid rgb(166, 126, 46);
 }
 
+.work-rows {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: stretch;
+}
+
 
 .work-client {
     -webkit-transform: perspective(1px) translateZ(0);
@@ -39,6 +46,7 @@
     transition-duration: 0.3s, 1s;
     -webkit-transition-property: transform, color;
     transition-property: transform, color;
+    z-index: 2;
     /* color: white; */
   }
   
@@ -46,4 +54,36 @@
     -webkit-transform: translateX(15px);
     transform: translateX(15px);
     color: rgb(218,49,44);
+    z-index: 4;
   }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
+
+
+.work-image {
+    max-height: 80%;
+    position: absolute !important;
+    align-self: center;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    animation-duration: .5s;
+    width: 50%;
+}
+
+.work-image-box {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+
+

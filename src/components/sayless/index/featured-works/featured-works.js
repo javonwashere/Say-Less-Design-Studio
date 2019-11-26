@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import Img from 'gatsby-image'
+import { Link } from 'gatsby'
+
 
 import './featured-works.css'
 import { StaticQuery } from 'gatsby'
 
 export default () => {
-return (
+  return (
     <StaticQuery
       query={pageQuery}
       render={data => {
@@ -13,15 +15,16 @@ return (
         return featuredWorks(allFeaturedWorks);
       }}
     />
-)}
+  )
+}
 
 
 const featuredWorks = (data) => {
-    const {title, collectionOfWorks} = data;
-    console.log("AYOO!!", collectionOfWorks);
-    const featuredWorksTable = works(collectionOfWorks);
-    
-  return(
+  const { title, collectionOfWorks } = data;
+  console.log("AYOO!!", collectionOfWorks);
+  const featuredWorksTable = works(collectionOfWorks);
+
+  return (
     <div className="feat-container">
       <div className="feat-wrapper">
         <div className="feat-header">
@@ -34,22 +37,44 @@ const featuredWorks = (data) => {
 }
 
 const works = (collectionOfWorks) => {
-    const workRows = collectionOfWorks.map(({client, featuredImage}, key) => {
-        const indexNumber = (key+1).toString().length > 1 ? key + 1 : `0${key + 1}`;
-        console.log(client, indexNumber);
-        return (
-            <div className="work-row">
-                <div className="work-client">{client}</div>
-                <div className="work-index">{indexNumber}</div>
-            </div>
-        )
-    })
-    return(
-        <div className="feat-table">
-            {workRows}
-        </div>
+  const imageContainer = useRef();
+  const imagesArray = [];
+  // console.log(collectionOfWorks)
+  const workRows = collectionOfWorks.map(({ client, slug, featuredImage }, key) => {
+    const indexNumber = (key + 1).toString().length > 1 ? key + 1 : `0${key + 1}`;
+    // console.log(client, indexNumber, featuredImage);
+    // todo: add on hover event listener
+    imagesArray.push({ key, featuredImage });
+    return (
+      <div className="work-row" id={key}>
+        <div className="work-client" id={key}><Link style={{ textDecoration: 'none' }} id={key} to={`/work/${slug}`}>{client}</Link></div>
+        <div className="work-index" id={key}>{indexNumber}</div>
+      </div>
     )
+  })
+
+  
+  const [index, setIndex] = useState(0);
+  
+  useEffect(()=> {
+    imageContainer.current.addEventListener('mousemove', function(event) {
+    let indexNumber = event.target.id;
+    if(index != indexNumber) {
+        setIndex(indexNumber)
+    }
+    },null);
+  })
+
+  return (
+    <div className="feat-table">
+      <div className="work-rows" ref={imageContainer}>
+      {imagesArray[index] && <Img className="work-image" fluid={imagesArray[index].featuredImage.fluid} />}
+        {workRows}
+      </div>
+    </div>
+  )
 }
+
 
 
 
@@ -62,14 +87,12 @@ export const pageQuery = graphql`
             title
             collectionOfWorks {
                 client
+                slug
               featuredImage {
-                fluid(maxHeight: 1180, maxWidth: 480) {
-                  sizes
-                  src
-                  srcSet
-                  srcSetWebp
-                  srcWebp
-                  tracedSVG
+                fluid(
+                  maxHeight: 500, quality: 70
+                ) {
+                  ...GatsbyContentfulFluid_tracedSVG
                 }
               }
             }
