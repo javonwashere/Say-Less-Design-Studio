@@ -1,5 +1,4 @@
 .feat-container {
-    position:absolute;
     left:0;
     right:0;
     margin: 0 auto;
@@ -7,6 +6,12 @@
     background-color: rgb(246, 240, 226);
     /* height: 100px; */
     padding-bottom: 2vh;
+}
+
+.feat-banner{
+  width: 100vw;
+  background-color: rgb(246, 240, 226);
+  align-self: center;
 }
 
 .feat-wrapper {

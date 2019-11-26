@@ -25,12 +25,14 @@ const featuredWorks = (data) => {
   const featuredWorksTable = works(collectionOfWorks);
 
   return (
-    <div className="feat-container">
-      <div className="feat-wrapper">
-        <div className="feat-header">
-          <h4>{title.toUpperCase()}</h4>
+    <div className="feat-banner">
+      <div className="feat-container">
+        <div className="feat-wrapper">
+          <div className="feat-header">
+            <h4>{title.toUpperCase()}</h4>
+          </div>
+          {featuredWorksTable}
         </div>
-        {featuredWorksTable}
       </div>
     </div>
   )
@@ -53,22 +55,22 @@ const works = (collectionOfWorks) => {
     )
   })
 
-  
+
   const [index, setIndex] = useState(0);
-  
-  useEffect(()=> {
-    imageContainer.current.addEventListener('mousemove', function(event) {
-    let indexNumber = event.target.id;
-    if(index != indexNumber) {
+
+  useEffect(() => {
+    imageContainer.current.addEventListener('mousemove', function (event) {
+      let indexNumber = event.target.id;
+      if (index != indexNumber) {
         setIndex(indexNumber)
-    }
-    },null);
+      }
+    }, null);
   })
 
   return (
     <div className="feat-table">
       <div className="work-rows" ref={imageContainer}>
-      {imagesArray[index] && <Img className="work-image" fluid={imagesArray[index].featuredImage.fluid} />}
+        {imagesArray[index] && <Img className="work-image" fluid={imagesArray[index].featuredImage.fluid} />}
         {workRows}
       </div>
     </div>

@@ -3,9 +3,13 @@
 }
 
 .video-container {
-    height: 400px;
+    height: max-content;
     width: auto;
-    background-color: lightgray;
+}
+
+.video-body {
+    width: 100%;
+    padding: 4vh 0;
 }
 
 .about-capabilities-ul {
