@@ -1,12 +1,15 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Link } from 'gatsby'
-import base from './base.css'
+import './base.css'
 import Container from './container'
-import Navigation from './navigation'
+import Navigation from './sayless/navigation/navigation'
+import Menu from "./sayless/navigation/menu";
+import {Transition} from "react-spring/renderprops-universal";
 
 class Template extends React.Component {
   render() {
     const { location, children } = this.props
+
     let header
 
     let rootPath = `/`
@@ -14,12 +17,31 @@ class Template extends React.Component {
       rootPath = __PATH_PREFIX__ + `/`
     }
 
-    return (
-      <Container>
-        <Navigation />
-        {children}
-      </Container>
-    )
+    const templateBody = (props) => {
+      return (
+          <body style={props}>
+          <Navigation />
+          <Container>
+            {children}
+          </Container>
+          </body>
+      )
+    }
+
+    const transitionFactory = (component) => {
+            return (
+                <Transition
+                    items={true}
+                    from={{ opacity: 0 }}
+                    enter={{ opacity: 1 }}
+                    leave={{ opacity: 0 }}>
+                  {show => show && (props => component(props))}
+                </Transition>
+            )
+    }
+
+    return transitionFactory(templateBody)
+
   }
 }
 

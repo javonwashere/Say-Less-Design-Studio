@@ -1,0 +1,114 @@
+.specialties-container {
+    display: flex;
+    margin-top: 10vh;
+    }
+
+.specialties-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-auto-flow: row;
+    height: 100%
+}
+
+.specialties-left {
+    width: 40%;
+    height: 80%;
+    padding-right: 10vw;
+}
+
+.specialties-right {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.specialty-child, .specialty-child-title {
+    white-space: nowrap;
+    align-self: end;
+}
+
+.specialty-child-title, .specialty-child-about-us {
+    grid-column: 1 / span 2;
+    font-size: 1.2em;
+}
+
+.specialty-child-about-us {
+    align-self: center;
+    max-width: 5vw;
+    justify-self: end;
+    grid-template-rows: .5fr;
+    padding-right: 2vw;
+}
+
+.specialty-item-detail-left, .specialty-item-detail-right {
+    font-family: "Untitled Sans", sans-serif;
+    font-weight: bold;
+    border-bottom: 2px solid rgb(166, 126, 46);
+    align-self: end;
+}
+
+.specialties-title {
+    justify-self: start;
+    font-size: 1.2vw;
+}
+
+.inner-text {
+    transform: translateY(-1em);
+    font-size: 1vw;
+}
+
+div sup {
+    font-weight: normal;
+}
+
+.specialty-item-detail-right {
+    padding-right: 1em;
+}
+
+.specialties-img {
+    position: relative;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 400px) {
+    .specialties-left {
+        padding-right: 2vw;
+    }
+    .inner-text {
+        font-size: 1.9vw;
+    }
+    .specialty-child-about-us {
+        max-width: 10vw;
+    }
+}
+
+@media screen and (min-width: 401px) and (max-width: 720px) {
+    .specialties-left {
+        padding-right: 8vw;
+    }
+
+}
+
+@media screen and (min-width: 721px) and (max-width: 1280px) {
+
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1440px) {
+
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+
+
+}
+
+@media screen and (min-width: 1921px) {
+}
