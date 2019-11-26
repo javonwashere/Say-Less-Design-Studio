@@ -1,0 +1,38 @@
+.hero-image {
+  padding-bottom: 10vh;
+}
+
+.client-info-container {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10vh;
+}
+
+.client-wrapper {
+  display: flex;
+}
+
+.client-info-header {
+  color: rgb(212, 191, 171);
+  font-weight: 400;
+}
+
+.client-column-left {
+  width: 0%;
+  padding-left: 8vw;
+}
+
+.client-column-right {
+  width: 50%;
+  padding-right: 6vw;
+}
+
+.client-info-text {
+  font-size: 1vw;
+}
+
+.client-info-details {
+  font-size: 1.4vw;
+  letter-spacing: 1.3px;
+  width: max-content;
+}
