@@ -5,7 +5,7 @@ import get from 'lodash/get'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import './case-study.css';
-import Modules from '../components/sayless/case-study-modules/Modules'
+import Modules from '../components/sayless/case-study-modules/modules'
 
 class CaseStudy extends React.Component {
   render() {
@@ -85,6 +85,8 @@ export const pageQuery = graphql`
             }
           }
           alignment
+          featuredImage
+          nonFeaturedImagePosition
         }
         ... on ContentfulImageSlideshow {
           id

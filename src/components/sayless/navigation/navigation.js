@@ -30,18 +30,16 @@ export default () => {
       }
       <container className="nav-container">
         <div className="navigationWrapper">
-        <ul className="navigationList">
-          <li className="navigationItem">
-            <Link style={{ zIndex: 1000 }} to="/"><img className="sayless-symbol navigationButton" src={SaylessSymbol} /></Link>
-          </li>
-          <li className="navigationItem navigationButton" onClick={toggleMenu}>
+        <div className="navigationList">
+            <Link style={{ zIndex: 1000 }} to="/"><img className="sayless-symbol" src={SaylessSymbol} /></Link>
+          <div className="navigationItem" onClick={toggleMenu}>
             <div>
               <div className="menu-bar"></div>
               <div className="menu-bar"></div>
               <div className="menu-bar"></div>
             </div>
-          </li>
-        </ul>
+          </div>
+        </div>
     </div>
     </container>
   </nav >

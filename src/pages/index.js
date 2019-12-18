@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 import Header from '../components/sayless/header/header'
 import Specialties from '../components/sayless/index/specialties/specialties'
 import FeaturedWorks from '../components/sayless/index/featured-works/featured-works'
+import HomeSlideshow from '../components/sayless/index/home-slideshow/home-slideshow'
 import Layout from '../components/layout'
 
 
@@ -21,6 +22,7 @@ class RootIndex extends React.Component {
         <div style={{ background: '#fff', display: 'flex', flexDirection: 'column' }}>
           <Helmet title={siteTitle} />
           <Header headerText={headerText} />
+          <HomeSlideshow />
           <Specialties />
           <FeaturedWorks />
         </div>

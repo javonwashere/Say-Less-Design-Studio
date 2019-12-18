@@ -1,0 +1,36 @@
+.case-study-modules {
+    display: flex;
+    flex-direction: column;
+}
+
+.one-img-wrapper, .two-img-wrapper {
+    margin: 4vh 0;
+}
+
+.two-img-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.left-img, .right-img {
+    width: 50%;
+    height: 50%;
+}
+
+.left-img {
+    margin-right: 2vw;
+}
+
+.right-img {
+    margin-left: 2vw;
+}
+
+
+.full-width {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}

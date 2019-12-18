@@ -9,7 +9,7 @@ export default ({ props }) => {
         let content = <div></div>;
         switch (typeName) {
             case "ContentfulImage":
-                content = <Images props={module} />
+                content = <Images props={module} />;
                 break;
             case "ContentfulTextBox":
                 content = <div>test textBox</div>;
@@ -18,7 +18,7 @@ export default ({ props }) => {
                 content = <div>test textBox</div>;
                 break;
             default:
-                content = <div>"no content found</div>
+                content = <div>"no content found"</div>
         }
         return content;
     })
