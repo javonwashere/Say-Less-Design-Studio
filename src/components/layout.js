@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import './base.css'
 import Container from './container'
 import Navigation from './sayless/navigation/navigation'
+import Footer from '../components/sayless/footer/footer'
 import Menu from "./sayless/navigation/menu";
 import {Transition} from "react-spring/renderprops-universal";
 
@@ -24,6 +25,7 @@ class Template extends React.Component {
           <Container>
             {children}
           </Container>
+          <Footer />
           </body>
       )
     }

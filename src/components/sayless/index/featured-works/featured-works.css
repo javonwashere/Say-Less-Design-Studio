@@ -90,5 +90,16 @@
   align-content: center;
 }
 
+.feat-more-works {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  padding-top: 5vmin;
+}
+
+.feat-more-works a {
+  color: rgb(218,49,44);
+}
+
 
 

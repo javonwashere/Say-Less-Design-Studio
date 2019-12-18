@@ -32,6 +32,9 @@ const featuredWorks = (data) => {
             <h4>{title.toUpperCase()}</h4>
           </div>
           {featuredWorksTable}
+          <div className="feat-more-works">
+            <h4><Link to={`/works`}>See More</Link></h4>
+          </div>
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import Images from './image-module/image-module'
+import TextBox from './textbox-module/textbox-module'
 
 export default ({ props }) => {
     console.log("GIVE ME THE MODULE", props);
@@ -12,10 +13,10 @@ export default ({ props }) => {
                 content = <Images props={module} />;
                 break;
             case "ContentfulTextBox":
-                content = <div>test textBox</div>;
+                content = <TextBox props={module} />;
                 break;
             case "ContentfulImageSlideshow":
-                content = <div>test textBox</div>;
+                content = <div>test ImageSlideShow</div>;
                 break;
             default:
                 content = <div>"no content found"</div>
