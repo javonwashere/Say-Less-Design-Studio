@@ -1,7 +1,7 @@
 import React from "react";
 import Img from 'gatsby-image'
-import ArrowLeft from '../../../assets/icons/arrow-left.png'
-import ArrowRight from '../../../assets/icons/arrow-right.png'
+import ArrowLeft from '../../../assets/icons/arrow-left.svg'
+import ArrowRight from '../../../assets/icons/arrow-right.svg'
 import {Spring} from "react-spring/renderprops-universal";
 
 export default ({ person, handleRightClick, handleLeftClick }) =>  {

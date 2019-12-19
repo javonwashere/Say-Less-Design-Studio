@@ -41,6 +41,10 @@
     display: flex;
 }
 
+.navbar-numbers-row div, .navbar-prev-next div {
+    font-size: 1vw;
+}
+
 .navbar-rule-container {
     display: inline-flex;
     align-items: center;
@@ -52,6 +56,10 @@
 
 .navbar-pagination {
     display: flex;
+}
+
+.slideshow-wrapper {
+    padding: 15vh 4vw;
 }
 
 

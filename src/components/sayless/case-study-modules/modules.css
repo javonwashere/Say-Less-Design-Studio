@@ -5,11 +5,13 @@
 
 .one-img-wrapper, .two-img-wrapper {
     margin: 4vh 0;
+    padding: 15vh 4vw;
 }
 
 .two-img-wrapper {
     display: flex;
     flex-direction: row;
+    padding: 15vh 4vw;
 }
 
 .left-img, .right-img {

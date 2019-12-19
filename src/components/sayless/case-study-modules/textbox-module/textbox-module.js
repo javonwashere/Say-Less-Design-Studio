@@ -1,20 +1,20 @@
 import React from 'react'
 import './textbox-module.css';
+import Triangle from '../../../../assets/icons/triangle.png'
 
 
 export default ({ props }) => {
     let content;
     const text = props.text.text;
-    if (props.type === "Header") {
+    if (props.type !== "Header") {
         content = generateHeader(text);
     } else {
-        f
-        //   content = generateOneImage(props);
+        content = generateQuote(text);
     }
 
 
     return (
-        <React.Fragment>
+        <React.Fragment>    
             {content}
         </React.Fragment>
     )
@@ -23,9 +23,28 @@ export default ({ props }) => {
 const generateHeader = (text) => {
     return (
         <div className="textbox-wrapper">
+            <div className="textbox-trangle-header">
+                <img src={Triangle} />
+            </div>
             <h1>
                 {text}
             </h1>
+        </div>
+    )
+}
+
+const generateQuote = (text) => {
+    return (
+        <div className="textbox-wrapper">
+            <div className="textbox-triangle-quote">
+                <img src={Triangle} />
+            </div>
+            <h1>
+                {text}
+            </h1>
+            <div className="textbox-client-quote">
+                - Client Quote
+            </div>
         </div>
     )
 }

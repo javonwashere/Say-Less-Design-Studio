@@ -1,5 +1,5 @@
 .about-title {
-    font-size: 4em;
+    font-size: 8vw;
 }
 
 .video-container {
@@ -110,4 +110,56 @@ hr {
     .about-description {
         padding-right: 15em;
     }
+}
+
+
+@media screen and (max-width: 400px) {
+  
+}
+
+@media screen and (max-width: 720px) {
+    .about-person-contents {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .about-person-left {
+        width: 100%;
+     }
+}
+
+@media screen and (max-width: 1024px) {
+    .about-person-contents {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .about-person-left {
+       width: 100%;
+       flex-direction: column-reverse;
+    }
+    .about-person-right {
+        margin-left: 0em;
+        width: 100%;
+    }
+    .about-person-name-container {
+        display: flex;  
+        writing-mode: initial;
+        transform: rotate(0deg);
+        padding-top: 1em;
+        flex-wrap: wrap;
+    }
+    .about-person-name {
+        margin-right: 2vw;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+
+}
+
+@media screen and (max-width: 1920px) {
+
+}
+
+@media screen and (min-width: 1921px) {
+
 }

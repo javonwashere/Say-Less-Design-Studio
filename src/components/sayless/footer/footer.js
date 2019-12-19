@@ -20,15 +20,15 @@ export default () => {
                     <div><Link to={`/contact`}>Contact</Link></div>
                 </div>
                 <div className="footer-social-links">
-                    <Link to="http://instagram.com/saylessstudio">
+                    <a href="http://www.instagram.com/saylessstudio">
                         <img className="footer-symbol instagram" src={Instagram} />
-                    </Link>
-                    <Link to="http://instagram.com/saylessstudio">
+                    </a>
+                    <a href="http://www.instagram.com/saylessstudio">
                         <img className="footer-symbol twitter" src={Twitter} />
-                    </Link>
-                    <Link to="http://instagram.com/saylessstudio">
+                    </a>
+                    <a href="http://www.instagram.com/saylessstudio">
                         <img className="footer-symbol pinterest" src={Pinterest} />
-                    </Link>
+                    </a>
 
                 </div>
             </div>
