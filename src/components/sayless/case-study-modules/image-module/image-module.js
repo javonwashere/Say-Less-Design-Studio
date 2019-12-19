@@ -22,13 +22,12 @@ const generateOneImage = (props) => {
   const fluid = props.images[0].fluid;
   const rightPadding = "2vw";
   const leftPadding = "2vw";
-  const width = 75;
+  const width = 100;
   const position = "center";
 
   const styles = {
     width: `${width}%`,
     alignSelf: position,
-    marginRight: rightPadding
   };
 
   return (
@@ -68,11 +67,11 @@ const generateTwoImages = (props) => {
     case "Left":
       imageWrapper = leftAlignImages(props, position, featured);
       break;
-    case "Center":
-      imageWrapper = centerAlignImages(props);
-      break;
     case "Right":
       imageWrapper = rightAlignImages(props, position, featured);
+      break;
+    default:
+      imageWrapper = centerAlignImages(props);
       break;
 
   }
@@ -88,15 +87,13 @@ const centerAlignImages = (props) => {
   const fluidLeft = props.images[0].fluid;
   const fluidRight = props.images[1].fluid;
 
-  const rightPadding = "2vw";
   const leftPadding = "2vw";
-  const width = 75;
+  const width = 100;
   const position = "center";
 
   const styles = {
     width: `${width}%`,
     alignSelf: position,
-    marginRight: rightPadding
   };
 
 
@@ -126,7 +123,7 @@ const leftAlignImages = (props, position, featured) => {
   )
 }
 
-const rightAlignImages = (props, position) => {
+const rightAlignImages = (props, position, featured) => {
   const fluidLeft = props.images[0].fluid;
   const fluidRight = props.images[1].fluid;
 
@@ -140,9 +137,3 @@ const rightAlignImages = (props, position) => {
       </div>
   )
 }
-
-
-
-// const leftAlign;
-
-// const rightAlign;
