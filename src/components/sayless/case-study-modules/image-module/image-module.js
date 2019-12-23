@@ -23,11 +23,10 @@ const generateOneImage = (props) => {
   const rightPadding = "2vw";
   const leftPadding = "2vw";
   const width = 100;
-  const position = "center";
-
+  const position = props.alignment.toLowerCase();
   const styles = {
     width: `${width}%`,
-    alignSelf: position,
+    justifySelf: position,
   };
 
   return (

@@ -14,8 +14,7 @@ class CaseStudy extends React.Component {
 
     const caseStudy = get(this.props, 'data.contentfulCaseStudy')
     console.log(caseStudy, "YO")
-    const { client, services, story, heroImage, modules } = caseStudy;
-    const paragraphs = story.story;
+    const { client, story, heroImage, services, modules } = caseStudy;
     return (
       <Layout location={this.props.location} >
         <div className="case-study-wrapper" style={{ background: '#fff' }}>
@@ -31,7 +30,7 @@ class CaseStudy extends React.Component {
                 </div>
                 <div className="services">
                   <h4 className="client-info-header">SERVICES</h4>
-                  {generateServices(services)}
+                  {services != null ? generateServices(caseStudy.services) : ""}
                 </div>
               </div>
               <div className="client-column-right">
@@ -41,7 +40,7 @@ class CaseStudy extends React.Component {
                 </div>
               </div>
             </div>
-            {modules && <Modules props={modules} />}
+            {modules != null && <Modules props={caseStudy.modules} />}
           </div>
         </div>
       </Layout>
@@ -50,9 +49,9 @@ class CaseStudy extends React.Component {
 }
 
 const constructPars = (story) => {
-  console.log("p", paragraphs);
   const boldRegex = /(\_{2})([^_]+)(\_{2})/g;
   const paragraphs = story.story;
+
   const convertBoldCharacters =
     (match, p1, p2, p3, offset, string) => {
       return `<strong>${p2}</strong>`;
@@ -134,6 +133,21 @@ export const pageQuery = graphql`
           alignment
           featuredImage
           nonFeaturedImagePosition
+        }
+        ... on ContentfulVideo {
+          id
+          internal {
+            type
+          }
+          mute
+          autoPlay
+          video {
+            file {
+              url
+              fileName
+              contentType
+            }
+          }
         }
         ... on ContentfulImageSlideshow {
           id

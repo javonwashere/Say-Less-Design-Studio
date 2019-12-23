@@ -9,7 +9,7 @@
     font-size: 4vw;
 }
 
-.textbox-wrapper head {
+.textbox-wrapper.head {
     text-align: center;
 }
 

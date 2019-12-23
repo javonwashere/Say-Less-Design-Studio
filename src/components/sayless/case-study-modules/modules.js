@@ -2,13 +2,14 @@ import React from 'react'
 import Images from './image-module/image-module'
 import TextBox from './textbox-module/textbox-module'
 import SlideShow from "./slideshow-module/slideshow-module"
+import Video from "./video/video-module"
 
 
 export default ({ props }) => {
     console.log("GIVE ME THE MODULE", props);
     const allModules = props.map((module) => {
-        const typeName = module.internal.type;
-        console.log(typeName);
+        const typeName = module.internal != null ? module.internal.type : "default";
+        console.log("TYPE NAME:", typeName);
         let content = <div></div>;
         switch (typeName) {
             case "ContentfulImage":
@@ -18,7 +19,10 @@ export default ({ props }) => {
                 content = <TextBox props={module} />;
                 break;
             case "ContentfulImageSlideshow":
-                content = <SlideShow props={module} />
+                content = <SlideShow props={module} />;
+                break;
+            case "ContentfulVideo":
+                content = <Video props={module} />;
                 break;
             default:
                 content = <div>"no content found"</div>
