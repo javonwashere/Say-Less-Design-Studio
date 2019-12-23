@@ -3,9 +3,13 @@
     flex-direction: column;
 }
 
-.one-img-wrapper, .two-img-wrapper {
+.two-img-wrapper {
     margin: 4vh 0;
     padding: 15vh 0vw;
+}
+
+.one-img-wrapper {
+    margin: 4vh 0;
 }
 
 .two-img-wrapper {
