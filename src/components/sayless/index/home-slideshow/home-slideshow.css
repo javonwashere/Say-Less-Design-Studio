@@ -45,6 +45,18 @@
     font-size: 1vw;
 }
 
+@media screen and (max-width: 400px) {
+    .navbar-numbers-row div, .navbar-prev-next div {
+        font-size: 3vw;
+    }
+}
+
+@media screen and (min-width: 401px) and (max-width: 720px) {
+    .navbar-numbers-row div, .navbar-prev-next div {
+        font-size: 3vw;
+    }
+}
+
 .navbar-rule-container {
     display: inline-flex;
     align-items: center;
@@ -58,8 +70,15 @@
     display: flex;
 }
 
+.slideshow-wrapper img {
+    cursor: url('../../../../assets/icons/cursor.png'), auto;	
+}
+
 .slideshow-wrapper {
-    padding: 15vh 0vw;
+    padding: 5vh 0vw;
+    width: calc(100% - 10vmin);
+    margin: 0 auto;
+    
 }
 
 

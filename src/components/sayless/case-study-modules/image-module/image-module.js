@@ -61,6 +61,8 @@ const generateTwoImages = (props) => {
   let position = getNonFeaturedImagePosition(nonFeaturedImagePosition);
   const featured = props.featuredImage === true ? "left" : "right";
 
+  console.log("tell tale,", props.featuredImage)
+
   const alignment = props.alignment;
   let imageWrapper;
   switch(alignment){

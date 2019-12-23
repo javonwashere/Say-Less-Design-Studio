@@ -7,6 +7,7 @@ import Specialties from '../components/sayless/index/specialties/specialties'
 import FeaturedWorks from '../components/sayless/index/featured-works/featured-works'
 import HomeSlideshow from '../components/sayless/index/home-slideshow/home-slideshow'
 import Layout from '../components/layout'
+import '../pages/index.css'
 
 
 class RootIndex extends React.Component {
@@ -15,7 +16,6 @@ class RootIndex extends React.Component {
     const posts = get(this, 'props.data.allContentfulBlogPost.edges');
     const headerText = get(this, 'props.data.allContentfulHomePageText.nodes[0].title.title');
     console.log(get(this, "props"));
-
 
     return (
       <Layout location={this.props.location} >

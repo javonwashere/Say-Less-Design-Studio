@@ -1,4 +1,5 @@
 .footer-container {
+    border-top: 2px solid rgb(166, 126, 46);
     display: flex;
 }
 
@@ -7,12 +8,11 @@
     margin: 0px auto;
     display: flex;
     align-items: center;
-    height: 180px;
+    height: 10vh;
     justify-content: center;
     width: 100%;
     justify-content: space-between;
-    border-top: 2px solid rgb(166, 126, 46);
-
+    padding: 0 3vw;
 }
 
 .footer-navigation {
@@ -42,4 +42,10 @@
     text-transform: uppercase;
     font-size: 1vw;
     padding-right: 5vw;
+}
+
+@media screen and (min-width: 320px) and (max-width: 720px){
+    .footer-navigation div a {
+    font-size: 2vw;
+    }
 }

@@ -1,0 +1,40 @@
+.works-container {
+    margin: 0 auto;
+}
+
+.works-wrapper {
+    width: calc(100% - 10vmin);
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.works-title{
+    max-width: 1180px;
+    margin: 0 auto;
+    width: calc(100% - 10vmin);
+}
+
+.case-study {
+    width: 45%;
+    padding: 2vh 0;
+}
+
+div.case-study-client-title {
+    padding-top: 1vh;
+    color: rgb(212, 191, 171);
+    text-decoration: none;
+    font-family: "Altero", Tahoma, Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 0.7vw;
+    padding-right: 5vw;
+}
+
+div.case-study-client-name {
+    text-transform: none;
+    text-decoration: none;
+    font-size: 1.2vw;
+    padding-right: 5vw;
+}

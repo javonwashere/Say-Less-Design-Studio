@@ -8,6 +8,8 @@
   max-height: 100px;
   font-size: 1.25em;
   background-color: white;
+  width: calc(100% - 10vmin);
+  margin: 0 auto;
 }
 
 .sayless-symbol {
@@ -153,7 +155,6 @@
 
   .sayless-symbol {
     max-width: 8vw;
-    transform: translateY(2.5vw)
   }
 
   .menu-items {
@@ -171,8 +172,7 @@
   }
 
   .sayless-symbol {
-    max-width: 10vw;
-    transform: translateY(2.5vw)
+    max-width: 8vw;
   }
 
   .menu-items {
@@ -189,8 +189,7 @@
   }
 
   .sayless-symbol {
-    max-width: 8vw;
-    transform: translateY(2.5vw)
+    max-width: 5vw;
   }
 
   .menu-items {

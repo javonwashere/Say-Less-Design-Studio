@@ -5,6 +5,7 @@ import get from 'lodash/get'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import './case-study.css';
+import './services.css';
 import Modules from '../components/sayless/case-study-modules/modules'
 
 class CaseStudy extends React.Component {
@@ -14,6 +15,7 @@ class CaseStudy extends React.Component {
     const caseStudy = get(this.props, 'data.contentfulCaseStudy')
     console.log(caseStudy, "YO")
     const { client, services, story, heroImage, modules } = caseStudy;
+    const paragraphs = story.story;
     return (
       <Layout location={this.props.location} >
         <div className="case-study-wrapper" style={{ background: '#fff' }}>
@@ -35,7 +37,7 @@ class CaseStudy extends React.Component {
               <div className="client-column-right">
                 <div className="story">
                   <h4 className="client-info-header">STORY</h4>
-                  <p className="client-info-text">{story.story}</p>
+                  {constructPars(story)}
                 </div>
               </div>
             </div>
@@ -47,13 +49,55 @@ class CaseStudy extends React.Component {
   }
 }
 
-const generateServices = (services) => {
-  let allServices = services.map((service, index) => {
-    return (<p className="client-info-details" key={index}>{service}</p>)
-  })
-
-  return allServices;
+const constructPars = (story) => {
+  console.log("p", paragraphs);
+  const boldRegex = /(\_{2})([^_]+)(\_{2})/g;
+  const paragraphs = story.story;
+  const convertBoldCharacters =
+    (match, p1, p2, p3, offset, string) => {
+      return `<strong>${p2}</strong>`;
+    }
+  const constructedParagraphs = paragraphs
+    .replace(boldRegex, convertBoldCharacters)
+    .split("\n\n");
+  return constructedParagraphs.map(p =>
+    <p
+      className="client-info-text"
+      dangerouslySetInnerHTML={{ __html: p }}
+    />
+  )
 }
+
+const generateServices = (services) => {
+  const serviceTypes = Object.entries(services).filter(service => service[1] != null);
+  const serviceListGroups = serviceTypes.map((serviceType, index) => {
+    const service = serviceType[0].replace(/([A-Z])/g, ' $1').trim().toUpperCase();
+    const serviceCategories = serviceType[1].map(category => {
+      const categoryItems = serviceType[1].length != 0 ?
+        <li className="client-info-category">{category}</li> : <li></li>;
+      return (
+        <React.Fragment>
+          {categoryItems}
+        </React.Fragment>
+      )
+    })
+
+    return (
+      <React.Fragment>
+        <li className="client-info-details">{service} +
+          <ul>{serviceCategories}</ul>
+        </li>
+      </React.Fragment>
+    )
+  })
+  return <ul className="client-info-services-list">{serviceListGroups}</ul>;
+}
+
+
+
+
+
+
 
 export default CaseStudy
 
@@ -69,8 +113,11 @@ export const pageQuery = graphql`
       story {
         story
       }
-      services
-
+      services {
+        branding
+        printDesign
+        digitalDesign
+      }
       modules {
         ... on ContentfulImage {
           id
@@ -100,6 +147,7 @@ export const pageQuery = graphql`
               ...GatsbyContentfulFluid_tracedSVG
             }
           }
+          slideshowType
         }
         ... on ContentfulTextBox {
           id
