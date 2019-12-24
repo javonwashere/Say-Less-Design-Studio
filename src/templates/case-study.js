@@ -83,7 +83,7 @@ const generateServices = (services) => {
 
     return (
       <React.Fragment>
-        <li className="client-info-details">{service} +
+        <li className="client-info-details">{service}
           <ul>{serviceCategories}</ul>
         </li>
       </React.Fragment>

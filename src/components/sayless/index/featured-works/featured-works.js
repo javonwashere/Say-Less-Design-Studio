@@ -33,7 +33,7 @@ const featuredWorks = (data) => {
           </div>
           {featuredWorksTable}
           <div className="feat-more-works">
-            <h4><Link to={`/works`}>See More</Link></h4>
+            <h4><Link to={`/work`}>See More</Link></h4>
           </div>
         </div>
       </div>

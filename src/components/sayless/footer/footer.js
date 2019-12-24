@@ -15,7 +15,7 @@ export default () => {
                     <img className="footer-logo" src={SaylessLogo} />
                 </div>
                 <div className="footer-navigation">
-                    <div><Link to={`/works`}>Works</Link></div>
+                    <div><Link to={`/work`}>Works</Link></div>
                     <div><Link to={`/inspo`}>Inspo</Link></div>
                     <div><Link to={`/contact`}>Contact</Link></div>
                 </div>

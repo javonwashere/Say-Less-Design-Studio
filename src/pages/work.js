@@ -4,7 +4,7 @@ import get from 'lodash/get'
 import Layout from "../components/layout";
 import Img from 'gatsby-image'
 import { Link } from "gatsby";
-import './works.css'
+import './work.css'
 
 
 

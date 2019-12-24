@@ -28,19 +28,60 @@
 }
 
 .client-info-text {
-  font-size: 2vw;
+  font-size: 1.2vw;
 }
 
 .client-info-details {
-  font-size: 1.4vw;
+  font-size: 1.7vw;
   letter-spacing: 1.3px;
   width: max-content;
 }
 
 .client-info-category {
-  font-size: 1.0vw;
+  font-size: 1.5vw;
   letter-spacing: 1.3px;
   width: max-content;
+}
+
+@media screen and (max-width: 400px) {
+  .client-info-text, .client-info-details {
+    font-size: 2.7vw;
+  }
+  .client-info-header {
+    font-size: 3vw;
+  }
+  ul.client-info-services-list li {
+    font-size: 2vw;
+    transform: translateX(-5vw);
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 720px) {
+  .client-info-text, .client-info-details  {
+    font-size: 3vw;
+  }
+  .client-info-header {
+    font-size: 2vw;
+  }
+  ul.client-info-services-list li {
+    font-size: 4vw;
+  }
+}
+
+@media screen and (min-width: 721px) and (max-width: 1280px) {
+
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1440px) {
+
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+
+}
+
+@media screen and (min-width: 1921px) {
+
 }
 
 

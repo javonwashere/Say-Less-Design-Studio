@@ -38,3 +38,38 @@ div.case-study-client-name {
     font-size: 1.2vw;
     padding-right: 5vw;
 }
+
+
+@media screen and (max-width: 400px) {
+    div.case-study-client-name {
+      font-size: 3vw;
+    }
+    div.case-study-client-title {
+        font-size: 2vw;
+    }
+  }
+  
+  @media screen and (min-width: 401px) and (max-width: 720px) {
+    div.case-study-client-name {
+        font-size: 3vw;
+      }
+      div.case-study-client-title {
+          font-size: 2vw;
+      }
+  }
+  
+  @media screen and (min-width: 721px) and (max-width: 1280px) {
+  
+  }
+  
+  @media screen and (min-width: 1281px) and (max-width: 1440px) {
+  
+  }
+  
+  @media screen and (min-width: 1441px) and (max-width: 1920px) {
+  
+  }
+  
+  @media screen and (min-width: 1921px) {
+  
+  }
