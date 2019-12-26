@@ -39,10 +39,10 @@ const generateVideo = ({ mute, autoPlay, video }) => {
     //             <source src={video.file.url} type={video.file.contentType} />
     //         </video>
     //         )
-    // }
+    // }controls autoPlay playsInline loop preload="metadata"
 
     // if (mute == true) {
-        return (<video className="video-body" controls mute={mute} autoPlay={autoPlay} playsInline>
+        return (<video className="video-body" controls mute={mute} autoPlay={autoPlay} playsInline preload="metadata" loop="true">
                 <source src={video.file.url} type={video.file.contentType} />
             </video>
             )

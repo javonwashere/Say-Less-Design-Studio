@@ -27,7 +27,7 @@ class AboutUs extends React.Component {
           <h1 className="about-title">{aboutUsTitle}</h1>
           <p className="about-description">{aboutUsDescription}</p>
           <div className="video-container">
-            <video className="video-body" controls autoPlay playsInline>
+            <video className="video-body" controls autoPlay playsInline loop preload="metadata">
               <source src={aboutUsVideo.file.url} type={aboutUsVideo.file.contentType} />
             </video>
           </div>
