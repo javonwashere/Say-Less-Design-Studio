@@ -16,7 +16,7 @@ export default () => {
                 </div>
                 <div className="footer-navigation">
                     <div><Link to={`/work`}>Works</Link></div>
-                    <div><Link to={`/inspo`}>Inspo</Link></div>
+                    <div><Link to={`/inspiration`}>Inspo</Link></div>
                     <div><Link to={`/contact`}>Contact</Link></div>
                 </div>
                 <div className="footer-social-links">
