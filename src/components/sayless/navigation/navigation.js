@@ -44,7 +44,7 @@ export default () => {
             <Link style={{ zIndex: 1000 }} to="/"><img className="sayless-symbol" src={SaylessSymbol} /></Link>
             <div className="navigationItem" onClick={toggleMenu}>
               <div>
-                {menuToggle}
+                {MenuBar}
               </div>
             </div>
           </div>
