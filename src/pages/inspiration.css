@@ -45,18 +45,13 @@
 }
 
 .inner-1-row-lower img {
-    width: 48%;
+    width: 45%;
+    padding-right: 2vw;
 }
 
-/* .inner-1-row-lower {
-    display: flex;
-    justify-content: space-between;
-    height: 4%; 
-} */
-
 .inner-1-row-lower {
-    display: flex;
-    justify-content: space-between;
+    display: inline-flex;
+    justify-content: flex-start;
 }
 
 .inner-2-row-lower img:nth-child(1) {
