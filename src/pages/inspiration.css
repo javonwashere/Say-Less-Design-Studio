@@ -47,11 +47,13 @@
 .inner-1-row-lower img {
     width: 45%;
     padding-right: 2vw;
+    display: inline;
 }
 
 .inner-1-row-lower {
     display: inline-flex;
     justify-content: flex-start;
+    max-height: inherit;
 }
 
 .inner-2-row-lower img:nth-child(1) {
