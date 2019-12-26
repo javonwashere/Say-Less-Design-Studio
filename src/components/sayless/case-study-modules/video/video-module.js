@@ -21,7 +21,7 @@ const generateVideo = ({ mute, autoPlay, video }) => {
         width: `${width}%`,
         alignSelf: position,
     };
-
+ 
     return (
         <video className="video-body" controls mute={mute} autoPlay={autoPlay} playsInline preload="metadata" loop="true">
             <source src={video.file.url} type={video.file.contentType} />
