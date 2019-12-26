@@ -46,14 +46,14 @@
 
 .inner-1-row-lower img {
     width: 45%;
-    padding-right: 2vw;
+    margin-right: 1vw;
     display: inline;
 }
 
 .inner-1-row-lower {
-    display: inline-flex;
-    justify-content: flex-start;
-    max-height: inherit;
+    /* display: inline-flex;
+    justify-content: flex-start; */
+    max-height: 100%;
 }
 
 .inner-2-row-lower img:nth-child(1) {

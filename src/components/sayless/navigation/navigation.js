@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import './navigation.css'
+import './hamburgs.css'
 import SaylessSymbol from '../../../assets/icons/sayless-symbol.png'
 import Menu from './menu'
 import { Transition } from "react-spring/renderprops-universal";
@@ -12,6 +13,15 @@ export default () => {
   const toggleMenu = () => {
     setMenuToggle(!menuToggle);
   }
+
+  const MenuBar = (
+    <React.Fragment>
+      <div className="menu-bar"></div>
+      <div className="menu-bar"></div>
+      <div className="menu-bar"></div>
+    </React.Fragment>
+  )
+
 
   return (
     <nav className="navigation">
@@ -30,18 +40,16 @@ export default () => {
       }
       <container className="nav-container">
         <div className="navigationWrapper">
-        <div className="navigationList">
+          <div className="navigationList">
             <Link style={{ zIndex: 1000 }} to="/"><img className="sayless-symbol" src={SaylessSymbol} /></Link>
-          <div className="navigationItem" onClick={toggleMenu}>
-            <div>
-              <div className="menu-bar"></div>
-              <div className="menu-bar"></div>
-              <div className="menu-bar"></div>
+            <div className="navigationItem" onClick={toggleMenu}>
+              <div>
+                {menuToggle}
+              </div>
             </div>
           </div>
         </div>
-    </div>
-    </container>
-  </nav >
-)
+      </container>
+    </nav >
+  )
 }
