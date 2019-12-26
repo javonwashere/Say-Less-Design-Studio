@@ -51,6 +51,7 @@
 .inner-1-row-lower {
     display: flex;
     justify-content: space-between;
+    height: 45%;
 }
 
 .inner-1-row-lower {
@@ -81,4 +82,3 @@
 .row-3 {
     padding-bottom: 2vh;
 }
-
