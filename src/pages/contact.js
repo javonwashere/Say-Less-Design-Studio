@@ -36,49 +36,79 @@ export default function Contact() {
             .catch((error) => alert(error))
     }
 
+    const form = (handleSubmit) => {
+        return (
+            <div className="form-wrapper">
+                <form
+                    name="contact"
+                    method="post"
+                    action="/thanks/"
+                    data-netlify="true"
+                    data-netlify-honeypot="bot-field"
+                    onSubmit={handleSubmit}
+                >
+                    {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+                    <input type="hidden" name="form-name" value="contact" />
+                    <p hidden>
+                        <label>
+                            Don’t fill this out: <input name="bot-field" onChange={handleChange} />
+                        </label>
+                    </p>
+                    <p>
+                        <label>First Name <br /><input type="text" name="firstName" onChange={handleChange} /></label>
+                    </p>
+                    <p>
+                        <label>Last Name <br /><input type="text" name="lastName" onChange={handleChange} /></label>
+                    </p>
+                    <p>
+                        <label>Company <br /><input type="text" name="company" onChange={handleChange} /></label>
+                    </p>
+                    <p>
+                        <label>Job Title <br /><input type="text" name="jobTitle" onChange={handleChange} /></label>
+                    </p>
+                    <p>
+                        <label>Email <br /><input type="email" name="email" onChange={handleChange} required/></label>
+                    </p>
+                    <p>
+                        <label>Phone Number <br /><input type="number" name="phoneNumber" onChange={handleChange} /></label>
+                    </p>
+                    <p>
+                        <label>
+                            Message:
+              <br />
+                            <textarea name="message" onChange={handleChange} onChange={handleChange} />
+                        </label>
+                    </p>
+                    <p>
+                        <button type="submit">Send</button>
+                    </p>
+                </form>
+            </div>
+        )
+    }
+
     return (
         <Layout>
-            <h1>Contact</h1>
-            <form
-                name="contact"
-                method="post"
-                action="/thanks/"
-                data-netlify="true"
-                data-netlify-honeypot="bot-field"
-                onSubmit={handleSubmit}
-            >
-                {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-                <input type="hidden" name="form-name" value="contact" />
-                <p hidden>
-                    <label>
-                        Don’t fill this out: <input name="bot-field" onChange={handleChange} />
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        Your name:
-              <br />
-                        <input type="text" name="name" onChange={handleChange} />
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        Your email:
-              <br />
-                        <input type="email" name="email" onChange={handleChange} />
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        Message:
-              <br />
-                        <textarea name="message" onChange={handleChange} />
-                    </label>
-                </p>
-                <p>
-                    <button type="submit">Send</button>
-                </p>
-            </form>
+            <div className="contact-wrapper">
+                <div className="contact-details">
+                    <h1 className="contact-header">Drop A Line. Say Hi. Tell A Story. Inquire.</h1>
+                    <div className="contact-info">
+                        <div className="contact-address">
+                            <h2>Address:</h2>
+                            <a href="http://maps.google.com/maps?q=39.9526,-75.1652">39.9526° N, 75.1652° W</a>
+                        </div>
+                        <div className="contact-phone">
+                            <h2>Phone:</h2>
+                            215 917 1373
+                        </div>
+                        <div className="contact-email">
+                            <h2>Email:</h2>
+                            saylessdesignstudio@gmail.com
+                        </div>
+                    </div>
+                </div>
+                {form(handleSubmit)}
+            </div>
         </Layout>
     )
 }
@@ -92,24 +122,24 @@ export default function Contact() {
 
 //         const form = (
 //             <form name="contact" netlify>
-//                 <p>
-//                     <label>First Name <input type="text" name="firstName" /></label>
-//                 </p>
-//                 <p>
-//                     <label>Last Name <input type="text" name="lastName" /></label>
-//                 </p>
-//                 <p>
-//                     <label>Company <input type="text" name="company" /></label>
-//                 </p>
-//                 <p>
-//                     <label>Job Title <input type="text" name="jobTitle" /></label>
-//                 </p>
-//                 <p>
-//                     <label>Email <input type="email" name="email" /></label>
-//                 </p>
-//                 <p>
-//                     <label>Phone Number <input type="number" name="phoneNumber" /></label>
-//                 </p>
+                // <p>
+                //     <label>First Name <input type="text" name="firstName" /></label>
+                // </p>
+                // <p>
+                //     <label>Last Name <input type="text" name="lastName" /></label>
+                // </p>
+                // <p>
+                //     <label>Company <input type="text" name="company" /></label>
+                // </p>
+                // <p>
+                //     <label>Job Title <input type="text" name="jobTitle" /></label>
+                // </p>
+                // <p>
+                //     <label>Email <input type="email" name="email" /></label>
+                // </p>
+                // <p>
+                //     <label>Phone Number <input type="number" name="phoneNumber" /></label>
+                // </p>
 //                 <p>
 //                     <button type="submit">Send</button>
 //                 </p>

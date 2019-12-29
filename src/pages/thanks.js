@@ -8,11 +8,13 @@ import { Link } from "gatsby";
 import './contact.css'
 
 
-export default ({location}) => {
+export default ({ location }) => {
   console.log(location.state);
   return (
     <Layout>
-      <h1>Thanks, {location.state.name}! We look forward to reaching out to you.</h1>
+      <div className="contact-wrapper" style={{ minHeight: "80vh" }}>
+        <h1 style={{textAlign: "center"}}>Thanks, {location.state.firstName}! We look forward to reaching out to you soon.</h1>
+      </div>
     </Layout>
   )
 }
