@@ -1,5 +1,4 @@
 import React from "react"
-import { graphql } from "gatsby"
 import { navigate } from 'gatsby-link'
 import get from 'lodash/get'
 import Layout from "../components/layout";
@@ -15,7 +14,7 @@ function encode(data) {
 }
 
 export default function Contact() {
-    const [state, setState] = React.useState({})
+    const [state, setState] = React.useState({ name: '' })
 
     const handleChange = (e) => {
         setState({ ...state, [e.target.name]: e.target.value })
@@ -36,9 +35,33 @@ export default function Contact() {
             .catch((error) => alert(error))
     }
 
-    const form = (handleSubmit) => {
-        return (
-            <div className="form-wrapper">
+    // const form = (handleSubmit) => {
+    //     return (
+            
+    //     )
+    // }
+
+    return (
+        <Layout>
+            <div className="contact-wrapper">
+                <div className="contact-details">
+                    <h1 className="contact-header">Drop A Line. Say Hi. Tell A Story. Inquire.</h1>
+                    <div className="contact-info">
+                        <div className="contact-address">
+                            <h2>Address:</h2>
+                            <a href="http://maps.google.com/maps?q=39.9526,-75.1652">39.9526° N, 75.1652° W</a>
+                        </div>
+                        <div className="contact-phone">
+                            <h2>Phone:</h2>
+                            215 917 1373
+                        </div>
+                        <div className="contact-email">
+                            <h2>Email:</h2>
+                            saylessdesignstudio@gmail.com
+                        </div>
+                    </div>
+                </div>
+                <div className="form-wrapper">
                 <form
                     name="contact"
                     method="post"
@@ -55,7 +78,7 @@ export default function Contact() {
                         </label>
                     </p>
                     <p>
-                        <label>First Name <br /><input type="text" name="firstName" onChange={handleChange} /></label>
+                        <label>First Name <br /><input type="text" name="name" onChange={handleChange} /></label>
                     </p>
                     <p>
                         <label>Last Name <br /><input type="text" name="lastName" onChange={handleChange} /></label>
@@ -84,30 +107,6 @@ export default function Contact() {
                     </p>
                 </form>
             </div>
-        )
-    }
-
-    return (
-        <Layout>
-            <div className="contact-wrapper">
-                <div className="contact-details">
-                    <h1 className="contact-header">Drop A Line. Say Hi. Tell A Story. Inquire.</h1>
-                    <div className="contact-info">
-                        <div className="contact-address">
-                            <h2>Address:</h2>
-                            <a href="http://maps.google.com/maps?q=39.9526,-75.1652">39.9526° N, 75.1652° W</a>
-                        </div>
-                        <div className="contact-phone">
-                            <h2>Phone:</h2>
-                            215 917 1373
-                        </div>
-                        <div className="contact-email">
-                            <h2>Email:</h2>
-                            saylessdesignstudio@gmail.com
-                        </div>
-                    </div>
-                </div>
-                {form(handleSubmit)}
             </div>
         </Layout>
     )

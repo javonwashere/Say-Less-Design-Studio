@@ -1,19 +1,22 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { navigate } from 'gatsby-link'
-import get from 'lodash/get'
 import Layout from "../components/layout";
-import Img from 'gatsby-image'
-import { Link } from "gatsby";
 import './contact.css'
 
 
-export default ({ location }) => {
-  console.log(location.state);
+export default ( props ) => {
+  console.log(props, "nigga");
+  // let name;
+  // if(location.state != null) {
+  //   name = '';
+  // } else {
+  //   name = location.state.name != null ? location.state.name : ''
+
+  
   return (
     <Layout>
       <div className="contact-wrapper" style={{ minHeight: "80vh" }}>
-        <h1 style={{textAlign: "center"}}>Thanks, {location.state.firstName}! We look forward to reaching out to you soon.</h1>
+        <h1 style={{textAlign: "center"}}>Thanks! We look forward to reaching out to you soon.</h1>
       </div>
     </Layout>
   )
