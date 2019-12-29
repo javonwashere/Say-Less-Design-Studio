@@ -46,8 +46,9 @@
 
 .inner-1-row-lower img {
     width: 45%;
+    height: 100%;
     margin-right: 1vw;
-    display: inline;
+    display: inline-block;
 }
 
 .inner-1-row-lower {

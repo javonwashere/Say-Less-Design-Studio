@@ -29,7 +29,9 @@ export default ({ style, toggleMenu }) => {
         <h1 className="menu-item">
           <Link style={{ textDecoration: "none" }} to={`/inspiration`} onClick={toggleMenu}>Inspiration</Link>
         </h1>
-        <h1 className="menu-item">Contact</h1>
+        <h1 className="menu-item">
+          <Link style={{ textDecoration: "none" }} to={`/contact`} onClick={toggleMenu}>Contact</Link>
+        </h1>
       </div>
     </div>
   )
