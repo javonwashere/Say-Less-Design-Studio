@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import get from 'lodash/get'
@@ -9,7 +9,63 @@ import './services.css';
 import Modules from '../components/sayless/case-study-modules/modules'
 
 class CaseStudy extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { isToggled: false };
+  }
+
   render() {
+    const constructPars = (story) => {
+      const boldRegex = /(\_{2})([^_]+)(\_{2})/g;
+      const paragraphs = story.story;
+
+      const convertBoldCharacters =
+        (match, p1, p2, p3, offset, string) => {
+          return `<strong>${p2}</strong>`;
+        }
+      const constructedParagraphs = paragraphs
+        .replace(boldRegex, convertBoldCharacters)
+        .split("\n\n");
+      return constructedParagraphs.map(p =>
+        <p
+          className="client-info-text"
+          dangerouslySetInnerHTML={{ __html: p }}
+        />
+      )
+    }
+
+    const generateServices = (services) => {
+      let showList = this.state.isToggled;
+      const toggleList = (e) => {
+        this.setState({
+          isToggled: !showList
+        })
+        console.log("WHAT UP", showList, e.target.className);
+      };
+      const serviceTypes = Object.entries(services).filter(service => service[1] != null);
+      const serviceListGroups = serviceTypes.map((serviceType, index) => {
+        const service = serviceType[0].replace(/([A-Z])/g, ' $1').trim().toUpperCase();
+        const serviceCategories = serviceType[1].map(category => {
+          const categoryItems = serviceType[1].length != 0 ?
+            <li className="client-info-category"><span>{category}</span></li> : <li></li>;
+          return (
+            <React.Fragment>
+              {categoryItems}
+            </React.Fragment>
+          )
+        })
+
+        return (
+          <React.Fragment>
+            <li className="client-info-details" onClick={toggleList}>{service}{"+"}
+            {this.state.isToggled && <ul>{serviceCategories}</ul>}
+            </li>
+          </React.Fragment>
+        )
+      })
+      return <ul className="client-info-services-list">{serviceListGroups}</ul>;
+    }
+
     // const siteTitle = get(this.props, 'data.site.siteMetadata.title')
 
     const caseStudy = get(this.props, 'data.contentfulCaseStudy')
@@ -45,52 +101,13 @@ class CaseStudy extends React.Component {
         </div>
       </Layout>
     )
+
   }
+
+
 }
 
-const constructPars = (story) => {
-  const boldRegex = /(\_{2})([^_]+)(\_{2})/g;
-  const paragraphs = story.story;
 
-  const convertBoldCharacters =
-    (match, p1, p2, p3, offset, string) => {
-      return `<strong>${p2}</strong>`;
-    }
-  const constructedParagraphs = paragraphs
-    .replace(boldRegex, convertBoldCharacters)
-    .split("\n\n");
-  return constructedParagraphs.map(p =>
-    <p
-      className="client-info-text"
-      dangerouslySetInnerHTML={{ __html: p }}
-    />
-  )
-}
-
-const generateServices = (services) => {
-  const serviceTypes = Object.entries(services).filter(service => service[1] != null);
-  const serviceListGroups = serviceTypes.map((serviceType, index) => {
-    const service = serviceType[0].replace(/([A-Z])/g, ' $1').trim().toUpperCase();
-    const serviceCategories = serviceType[1].map(category => {
-      const categoryItems = serviceType[1].length != 0 ?
-        <li className="client-info-category">{category}</li> : <li></li>;
-      return (
-        <React.Fragment>
-          {categoryItems}
-        </React.Fragment>
-      )
-    })
-
-    return (
-      <React.Fragment>
-        <li className="client-info-details">{service}
-          <ul>{serviceCategories}</ul>
-        </li>
-      </React.Fragment>
-    )
-  })
-  return <ul className="client-info-services-list">{serviceListGroups}</ul>;
-}
 
 
 

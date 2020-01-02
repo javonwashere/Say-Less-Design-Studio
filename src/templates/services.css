@@ -28,7 +28,7 @@ ul.client-info-services-list li ul {
    /* optional: submenu is same width than parent entry width */
     min-width: 100%;
    /* optional: submenu background color */
-    background-color: white;
+    /* background-color: white; */
     z-index: 1000;
     list-style: none;
     /* transform: translateX(2vw) */

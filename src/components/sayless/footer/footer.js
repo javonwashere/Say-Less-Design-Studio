@@ -15,9 +15,9 @@ export default () => {
                     <img className="footer-logo" src={SaylessLogo} />
                 </div>
                 <div className="footer-navigation">
-                    <div><Link to={`/work`}>Works</Link></div>
-                    <div><Link to={`/inspiration`}>Inspo</Link></div>
-                    <div><Link to={`/contact`}>Contact</Link></div>
+                    <div><a href={`/work`}>Works</a></div>
+                    <div><a href={`/inspiration`}>Inspo</a></div>
+                    <div><a href={`/contact`}>Contact</a></div>
                 </div>
                 <div className="footer-social-links">
                     <a href="http://www.instagram.com/saylessstudio">
