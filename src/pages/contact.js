@@ -80,14 +80,14 @@ export default function Contact() {
                         onSubmit={handleOnSubmit}
                     >
                         {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-                        <input type="hidden" name="form-name" value="contact" />
-                        <p hidden>
+                        {/* <input type="hidden" name="form-name" value="contact" /> */}
+                        {/* <p hidden>
                             <label>
                                 Don’t fill this out: <input name="bot-field" onChange={handleChange} />
                             </label>
-                        </p>
+                        </p> */}
                         <p>
-                            <label>First Name <br /><input type="text" name="name" onChange={handleChange} /></label>
+                            <label>First Name <br /><input type="text" name="firstName" onChange={handleChange} /></label>
                         </p>
                         <p>
                             <label>Last Name <br /><input type="text" name="lastName" onChange={handleChange} /></label>
