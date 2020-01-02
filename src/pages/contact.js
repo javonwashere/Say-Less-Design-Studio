@@ -1,4 +1,6 @@
-import React from "react"
+import React, { useState } from "react"
+import axios from "axios";
+
 import { navigate } from 'gatsby-link'
 import get from 'lodash/get'
 import Layout from "../components/layout";
@@ -20,26 +22,36 @@ export default function Contact() {
         setState({ ...state, [e.target.name]: e.target.value })
     }
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        const form = e.target
-        fetch('/', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: encode({
-                'form-name': form.getAttribute('name'),
-                ...state,
-            }),
+    const [serverState, setServerState] = useState({
+        submitting: false,
+        status: null
+    });
+    const handleServerResponse = (ok, msg, form) => {
+        setServerState({
+            submitting: false,
+            status: { ok, msg }
+        });
+        if (ok) {
+            form.reset();
+        }
+    };
+    const handleOnSubmit = e => {
+        e.preventDefault();
+        const form = e.target;
+        setServerState({ submitting: true });
+        axios({
+            method: "post",
+            url: "https://getform.io/f/d0b871a4-8db0-4eda-bc8a-64a530534984",
+            data: new FormData(form)
         })
-            .then(() => navigate(form.getAttribute('action'), { state }))
-            .catch((error) => alert(error))
-    }
-
-    // const form = (handleSubmit) => {
-    //     return (
-            
-    //     )
-    // }
+            .then(r => {
+                handleServerResponse(true, "Thanks!", form);
+            })
+            .then(() => navigate("/thanks", { status }))
+            .catch(r => {
+                handleServerResponse(false, r.response.data.error, form);
+            });
+    };
 
     return (
         <Layout>
@@ -62,51 +74,48 @@ export default function Contact() {
                     </div>
                 </div>
                 <div className="form-wrapper">
-                <form
-                    name="contact"
-                    method="post"
-                    action="/thanks/"
-                    data-netlify="true"
-                    data-netlify-honeypot="bot-field"
-                    onSubmit={handleSubmit}
-                >
-                    {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-                    <input type="hidden" name="form-name" value="contact" />
-                    <p hidden>
-                        <label>
-                            Don’t fill this out: <input name="bot-field" onChange={handleChange} />
-                        </label>
-                    </p>
-                    <p>
-                        <label>First Name <br /><input type="text" name="name" onChange={handleChange} /></label>
-                    </p>
-                    <p>
-                        <label>Last Name <br /><input type="text" name="lastName" onChange={handleChange} /></label>
-                    </p>
-                    <p>
-                        <label>Company <br /><input type="text" name="company" onChange={handleChange} /></label>
-                    </p>
-                    <p>
-                        <label>Job Title <br /><input type="text" name="jobTitle" onChange={handleChange} /></label>
-                    </p>
-                    <p>
-                        <label>Email <br /><input type="email" name="email" onChange={handleChange} required/></label>
-                    </p>
-                    <p>
-                        <label>Phone Number <br /><input type="number" name="phoneNumber" onChange={handleChange} /></label>
-                    </p>
-                    <p>
-                        <label>
-                            Message:
+                    <form
+                        name="contact"
+                        method="post"
+                        onSubmit={handleOnSubmit}
+                    >
+                        {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+                        <input type="hidden" name="form-name" value="contact" />
+                        <p hidden>
+                            <label>
+                                Don’t fill this out: <input name="bot-field" onChange={handleChange} />
+                            </label>
+                        </p>
+                        <p>
+                            <label>First Name <br /><input type="text" name="name" onChange={handleChange} /></label>
+                        </p>
+                        <p>
+                            <label>Last Name <br /><input type="text" name="lastName" onChange={handleChange} /></label>
+                        </p>
+                        <p>
+                            <label>Company <br /><input type="text" name="company" onChange={handleChange} /></label>
+                        </p>
+                        <p>
+                            <label>Job Title <br /><input type="text" name="jobTitle" onChange={handleChange} /></label>
+                        </p>
+                        <p>
+                            <label>Email <br /><input type="email" name="email" onChange={handleChange} required /></label>
+                        </p>
+                        <p>
+                            <label>Phone Number <br /><input type="number" name="phoneNumber" onChange={handleChange} /></label>
+                        </p>
+                        <p>
+                            <label>
+                                Message:
               <br />
-                            <textarea name="message" onChange={handleChange} onChange={handleChange} />
-                        </label>
-                    </p>
-                    <p>
-                        <button type="submit">Send</button>
-                    </p>
-                </form>
-            </div>
+                                <textarea name="message" onChange={handleChange} onChange={handleChange} />
+                            </label>
+                        </p>
+                        <p>
+                            <button type="submit">Send</button>
+                        </p>
+                    </form>
+                </div>
             </div>
         </Layout>
     )
