@@ -24,6 +24,12 @@ class RootIndex extends React.Component {
         <div style={{ background: '#fff', display: 'flex', flexDirection: 'column' }}>
           <Helmet title={siteTitle}>
             <meta name="description" content={metadata} />
+            <meta property="og:image" content="../assets/icons/say-less-image-graph.jpg" />
+            <meta property='og:description' content={metadata} />
+            <meta name='twitter:title' content={siteTitle} />
+            <meta name='twitter:description' content={metadata} />
+            <meta name='twitter:image' content="../assets/icons/say-less-image-graph.jpg" />
+
           </Helmet>
           <Header headerText={headerText} />
           <HomeSlideshow />
@@ -43,6 +49,7 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         description
+        image
       }
     }
     allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
