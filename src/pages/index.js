@@ -13,6 +13,8 @@ import '../pages/index.css'
 class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title');
+    const metadata = get(this, 'props.data.site.siteMetadata.description');
+    console.log(metadata)
     const posts = get(this, 'props.data.allContentfulBlogPost.edges');
     const headerText = get(this, 'props.data.allContentfulHomePageText.nodes[0].title.title');
     console.log(get(this, "props"));
@@ -20,7 +22,9 @@ class RootIndex extends React.Component {
     return (
       <Layout location={this.props.location} >
         <div style={{ background: '#fff', display: 'flex', flexDirection: 'column' }}>
-          <Helmet title={siteTitle} />
+          <Helmet title={siteTitle}>
+            <meta name="description" content={metadata} />
+          </Helmet>
           <Header headerText={headerText} />
           <HomeSlideshow />
           <Specialties />
@@ -38,6 +42,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        description
       }
     }
     allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
