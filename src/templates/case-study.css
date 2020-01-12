@@ -37,6 +37,37 @@
   width: max-content;
 }
 
+.client-info-details ul {
+  position: absolute;
+}
+
+#example {
+  position: relative;
+}
+#example-checkbox {
+  display: none;
+}
+#example-checkbox:checked + #example:after {
+  content: "Hide";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+}
+
+button.toggling-icon{
+  content: '+';
+  display: block;
+}
+button.toggling-icon:focus:after,
+button.toggling-icon:active:after{
+  content: '-';
+  display: block;
+}
+
+
 .client-info-category {
   font-size: 1.5vw;
   letter-spacing: 1.3px;

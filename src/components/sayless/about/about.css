@@ -12,6 +12,10 @@
     padding: 4vh 0;
 }
 
+.about-capabilities-wrapper {
+    margin: 7vh 0;
+}
+
 .about-capabilities-ul {
     display: flex;
     flex-direction: row;
@@ -23,7 +27,7 @@
 .about-capabilities-li {
     list-style: none;
     flex: 0 0 33.333333%;
-    font-size: 1vw;
+    font-size: 2vw;
 }
 
 .about-person-wrapper {
@@ -65,6 +69,7 @@
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
+    padding-bottom: 2vh;
 }
 
 .about-person-website a, .about-person-insta a {
@@ -133,6 +138,7 @@ hr {
      /* default values */
 .about-description {
     padding-right: 2vw;
+    font-size: 4vw;
 }
 .about-person-contents {
     display: flex;
@@ -156,6 +162,11 @@ hr {
 .about-person-name {
     margin-right: 2vw;
 }
+
+.about-person-insta, .about-person-website {
+    
+    font-size: 3vw;
+}
 }
 
 @media screen and (max-width: 720px) {
@@ -164,12 +175,6 @@ hr {
 
 @media screen and (min-width: 721px) and (max-width: 1280px) {
     
-
-
-
-
-
-
 }
 
 @media screen and (min-width: 1281px) and (max-width: 1440px) {

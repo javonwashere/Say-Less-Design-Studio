@@ -5,8 +5,10 @@ import SlideShow from "./slideshow-module/slideshow-module"
 import Video from "./video/video-module"
 
 
-export default ({ props }) => {
+export default ({ props, name }) => {
     console.log("GIVE ME THE MODULE", props);
+    console.log("is there anyway I can get the name", name)
+
     const allModules = props.map((module) => {
         const typeName = module.internal != null ? module.internal.type : "default";
         console.log("TYPE NAME:", typeName);
@@ -16,7 +18,7 @@ export default ({ props }) => {
                 content = <Images props={module} />;
                 break;
             case "ContentfulTextBox":
-                content = <TextBox props={module} />;
+                content = <TextBox props={module} name={name} />;
                 break;
             case "ContentfulImageSlideshow":
                 content = <SlideShow props={module} />;

@@ -22,16 +22,45 @@ class AboutUs extends React.Component {
       const aboutUsDescription = data.allContentfulAbout.edges[0].node.aboutUsDescription.aboutUsDescription
       const aboutUsCapabilities = data.allContentfulAbout.edges[0].node.childContentfulAboutCapabilitiesRichTextNode.json
       const aboutUsPeople = data.allContentfulPerson.edges;
+
+      const aboutUsText = () => {
+        const splitText = "Say Less is a *Digital Design Studio ."
+        const aboutUsSplitText = aboutUsTitle.split("*");
+        console.log(aboutUsSplitText)
+        const text = aboutUsSplitText.map(headerText => {
+          return (<h1 className="header-text" style={{ margin: "3vh 0", lineHeight: "150%" }}>{headerText}</h1>)
+        })
+        return (
+          <React.Fragment>
+            {text}
+          </React.Fragment>
+        )
+      }
+
+      const Header = () => {
+        return (
+          <header className="header-sayless" >
+            <div className="header-container">
+              <div className="header-wrapper">
+              {aboutUsText()}
+              </div>
+            </div>
+          </header>
+        )
+      }
+
       return (
         <div className="wrapper">
-          <h1 className="about-title">{aboutUsTitle}</h1>
+          {Header()}
           <p className="about-description">{aboutUsDescription}</p>
           <div className="video-container">
             <video className="video-body" controls autoPlay playsInline loop preload="metadata">
               <source src={aboutUsVideo.file.url} type={aboutUsVideo.file.contentType} />
             </video>
           </div>
-          <div>{addStylingToCapabilities(aboutUsCapabilities)}</div>
+          <div className="about-capabilities-wrapper">
+          {addStylingToCapabilities(aboutUsCapabilities)}
+          </div>
           <hr />
           <People className="about-people" people={aboutUsPeople} />
         </div>

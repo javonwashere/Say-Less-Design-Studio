@@ -29,18 +29,43 @@
     align-self: end;
 }
 
-.specialty-child-title, .specialty-child-about-us {
+.specialty-child-title {
     grid-column: 1 / span 2;
     font-size: 1.2em;
 }
 
+.specialty-child-title {
+    grid-column: 1 / span 2;
+    font-size: 1.2em;
+}
+
+.specialties-title h2 {
+    margin: 0
+}
+
 .specialty-child-about-us {
-    align-self: center;
+    align-self: end;
     max-width: 5vw;
     justify-self: end;
     grid-template-rows: .5fr;
     padding-right: 2vw;
+    position: relative;
+    margin-top: 2vh;
 }
+
+.specialty-child-about-us-arrow {
+    position: absolute;
+}
+
+.specialty-child-about-us-text {
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+    transform-origin: 25% 27%;
+
+}
+
+
 
 .specialty-item-detail-left, .specialty-item-detail-right {
     font-family: "Untitled Sans", sans-serif;
@@ -72,6 +97,9 @@ div sup {
 }
 
 
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
 
 

@@ -3,6 +3,10 @@ import { StaticQuery, graphql, Link } from 'gatsby'
 import "./specialties.css"
 import Img from "gatsby-image";
 import AboutUs from "../../../../../src/assets/icons/about-us.png"
+import AboutUsText from "../../../../../src/assets/icons/aboutus-text.png"
+import AboutUsArrow from "../../../../../src/assets/icons/aboutus-arrow.png"
+
+
 
 // Static Query needed to fetch data from this component specifically
 export default () =>  {
@@ -62,9 +66,12 @@ const specialtiesComponent = (data) => {
                   </div>
                 </div>
               {listOfSpecialties(description)}
+                <div className="specialty-child-holder" />
                 <div className="specialty-child-about-us">
                   <Link to={"/aboutus"}>
-                  <img className="specialty-child-about-us-img" src={AboutUs} />
+                  <img className="specialty-child-about-us-arrow" src={AboutUsArrow} />
+                  <img className="specialty-child-about-us-text" src={AboutUsText} />
+
                   </Link>
                 </div>
               </div>

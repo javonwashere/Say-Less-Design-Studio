@@ -3,13 +3,14 @@ import './textbox-module.css';
 import Triangle from '../../../../assets/icons/triangle.png'
 
 
-export default ({ props }) => {
+export default ({ props, name }) => {
     let content;
+    console.log("GIMME MORE", props)
     const text = props.text.text;
     if (props.type != "Header") {
-        content = generateHeader(text);
+        content = generateHeader(text, name);
     } else {
-        content = generateQuote(text);
+        content = generateQuote(text, name);
     }
 
     return (
@@ -19,7 +20,7 @@ export default ({ props }) => {
     )
 }
 
-const generateHeader = (text) => {
+const generateHeader = (text, name) => {
     return (
         <div className="textbox-wrapper head">
             <div className="textbox-triangle-header">
@@ -32,7 +33,7 @@ const generateHeader = (text) => {
     )
 }
 
-const generateQuote = (text) => {
+const generateQuote = (text, name) => {
     return (
         <div className="textbox-wrapper">
             <div className="textbox-triangle-quote">
@@ -42,7 +43,7 @@ const generateQuote = (text) => {
                 {text}
             </h1>
             <div className="textbox-client-quote">
-                - Client Quote
+                - {name}
             </div>
         </div>
     )

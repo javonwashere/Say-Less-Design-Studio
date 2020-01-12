@@ -40,11 +40,11 @@ class CaseStudy extends React.Component {
         this.setState({
           isToggled: !showList
         })
-        console.log("WHAT UP", showList, e.target.className);
       };
       const serviceTypes = Object.entries(services).filter(service => service[1] != null);
       const serviceListGroups = serviceTypes.map((serviceType, index) => {
-        const service = serviceType[0].replace(/([A-Z])/g, ' $1').trim().toUpperCase();
+        const service = serviceType[0].replace(/([A-Z])/g, ' $1').trim();
+        const serviceCapped = service.charAt(0).toUpperCase() + service.slice(1)
         const serviceCategories = serviceType[1].map(category => {
           const categoryItems = serviceType[1].length != 0 ?
             <li className="client-info-category"><span>{category}</span></li> : <li></li>;
@@ -57,7 +57,7 @@ class CaseStudy extends React.Component {
 
         return (
           <React.Fragment>
-            <li className="client-info-details" onClick={toggleList}>{service}{"+"}
+            <li className={`client-info-details`} onClick={toggleList}>{serviceCapped}{" +"}
             {this.state.isToggled && <ul>{serviceCategories}</ul>}
             </li>
           </React.Fragment>
@@ -69,11 +69,10 @@ class CaseStudy extends React.Component {
     // const siteTitle = get(this.props, 'data.site.siteMetadata.title')
 
     const caseStudy = get(this.props, 'data.contentfulCaseStudy')
-    console.log(caseStudy, "YO")
     const { client, story, heroImage, services, modules } = caseStudy;
     return (
       <Layout location={this.props.location} >
-        <div className="case-study-wrapper" style={{ background: '#fff' }}>
+        <div className="case-study-wrapper" style={{ background: '#fff', marginBottom: '6vh' }}>
           <div className="hero-image">
             <Img alt="" fluid={heroImage.fluid} />
           </div>
@@ -96,7 +95,7 @@ class CaseStudy extends React.Component {
                 </div>
               </div>
             </div>
-            {modules != null && <Modules props={caseStudy.modules} />}
+            {modules != null && <Modules props={ caseStudy.modules } name={client}/>}
           </div>
         </div>
       </Layout>

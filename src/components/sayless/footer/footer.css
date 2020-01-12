@@ -52,6 +52,6 @@
 
 @media screen and (min-width: 721px) and (max-width: 2000px){
     .footer-wrapper {
-        padding: 2.3vh 0;
+        /* padding: 2.3vh 0; */
     }
 }

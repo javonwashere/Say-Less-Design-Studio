@@ -13,13 +13,13 @@
 }
 
 .header-text {
-    font-size: 5.1vw;
+    /* font-size: 5rem; */
     line-height: 68%;
 }
 
 @media screen and (max-width: 400px) {
     .header-text {
-        font-size: 7vw;
+        font-size: 8vw;
     }
 }
 
