@@ -22,7 +22,7 @@ module.exports = {
     description: "Say Less is a Digital Design Studio helmed by Philadelphia, PA based creatives Cheyenne Jacobs and Randi Bellamy",
     url: "http://www.sayless.studio", // No trailing slash allowed!
     image: "src/assets/icons/say-less-image-graph.jpg", // Path to your image you placed in the 'static' folder
-    twitterUsername: "@theolivewave",
+    twitterUsername: "@sayless_studio",
   },
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [
