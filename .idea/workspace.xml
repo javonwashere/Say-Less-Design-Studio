@@ -3,20 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4448b1c7-7d14-4fb5-ac1a-b6275d5e8847" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/icons/about-us.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons/about-us.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/icons/sayless-symbol.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons/sayless-symbol.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sayless/about/about.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sayless/about/about.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sayless/case-study-modules/modules.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sayless/case-study-modules/modules.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sayless/case-study-modules/textbox-module/textbox-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sayless/case-study-modules/textbox-module/textbox-module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sayless/header/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sayless/header/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sayless/index/specialties/specialties.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sayless/index/specialties/specialties.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sayless/index/specialties/specialties.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sayless/index/specialties/specialties.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sayless/navigation/navigation.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sayless/navigation/navigation.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/aboutus.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/aboutus.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/work.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/work.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/case-study.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/case-study.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/case-study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/case-study.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/services.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/services.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/sayless/index/home-slideshow/home-slideshow.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="361">
-              <caret line="66" column="44" lean-forward="true" selection-start-line="66" selection-start-column="44" selection-end-line="66" selection-end-column="44" />
+              <caret line="66" column="44" selection-start-line="66" selection-start-column="44" selection-end-line="66" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -115,8 +101,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+            <state relative-caret-position="210">
+              <caret line="22" column="46" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -128,7 +114,7 @@
         <entry file="file://$PROJECT_DIR$/src/pages/aboutus.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="435">
-              <caret line="62" column="13" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
+              <caret line="66" column="13" selection-start-line="66" selection-start-column="13" selection-end-line="66" selection-end-column="13" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -389,7 +375,7 @@
       <workItem from="1573707530356" duration="2154000" />
       <workItem from="1574090004887" duration="587000" />
       <workItem from="1575147478462" duration="13279000" />
-      <workItem from="1578795951296" duration="2966000" />
+      <workItem from="1578795951296" duration="4855000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1572070738392</created>
@@ -409,11 +395,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81880000" />
+    <option name="totallyTimeSpent" value="83769000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="967" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26495728" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -804,8 +789,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+        <state relative-caret-position="210">
+          <caret line="22" column="46" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
@@ -815,7 +800,7 @@
     <entry file="file://$PROJECT_DIR$/src/pages/aboutus.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
-          <caret line="62" column="13" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
+          <caret line="66" column="13" selection-start-line="66" selection-start-column="13" selection-end-line="66" selection-end-column="13" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
@@ -835,7 +820,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/sayless/index/home-slideshow/home-slideshow.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
-          <caret line="66" column="44" lean-forward="true" selection-start-line="66" selection-start-column="44" selection-end-line="66" selection-end-column="44" />
+          <caret line="66" column="44" selection-start-line="66" selection-start-column="44" selection-end-line="66" selection-end-column="44" />
         </state>
       </provider>
     </entry>

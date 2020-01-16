@@ -24,7 +24,6 @@ export default () =>  {
 
 const specialtiesComponent = (data) => {
       const specialtiesInfo = data.allContentfulSpecialties.nodes[0];
-      console.log("BRO", specialtiesInfo);
       const title = specialtiesInfo.title;
       const description = specialtiesInfo.specialtiesList.specialtiesList.split("\n");
       const img = specialtiesInfo.specialtiesImage.fluid;

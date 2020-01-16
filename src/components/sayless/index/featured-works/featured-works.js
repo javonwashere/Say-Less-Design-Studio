@@ -21,7 +21,6 @@ export default () => {
 
 const featuredWorks = (data) => {
   const { title, collectionOfWorks } = data;
-  console.log("AYOO!!", collectionOfWorks);
   const featuredWorksTable = works(collectionOfWorks);
 
   return (

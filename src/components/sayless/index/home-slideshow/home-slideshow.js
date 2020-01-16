@@ -64,8 +64,6 @@ const numbers = (images, setIndex) => {
 
 const paginationRows = (images, setIndex) => {
 
-  // console.log("show the images", images);
-
   return (
     <div className="navigation-slideshow">
       <div className="navigation-numbers-wrapper">
@@ -88,7 +86,6 @@ const slideShow = (images) => {
     <div className="slideshow-wrapper">
       {transitions.map(({ item, props, key }) => {
         const Image = images[item];
-        console.log(Image);
         return <Image key={key} style={props} />
       })}
       {paginationRows(images, setIndex)}

@@ -6,6 +6,7 @@ import Header from '../components/sayless/header/header'
 import Specialties from '../components/sayless/index/specialties/specialties'
 import FeaturedWorks from '../components/sayless/index/featured-works/featured-works'
 import HomeSlideshow from '../components/sayless/index/home-slideshow/home-slideshow'
+import openGraphImg from "../assets/icons/say-less-image-graph.jpg"
 import Layout from '../components/layout'
 import '../pages/index.css'
 
@@ -17,18 +18,23 @@ class RootIndex extends React.Component {
     console.log(metadata)
     const posts = get(this, 'props.data.allContentfulBlogPost.edges');
     const headerText = get(this, 'props.data.allContentfulHomePageText.nodes[0].title.title');
-    console.log(get(this, "props"));
 
     return (
       <Layout location={this.props.location} >
         <div style={{ background: '#fff', display: 'flex', flexDirection: 'column' }}>
           <Helmet title={siteTitle}>
-            <meta name="description" content={metadata} />
-            <meta property="og:image" content="../assets/icons/say-less-image-graph.jpg" />
+            <meta content={metadata} name="description" />
+            <meta property="og:type" content="website" />
+            <meta property="og:image" content={openGraphImg} />
+            <meta property="og:url" content="https://sayless.studio" />
+            <meta property="og:title" content={siteTitle} />
             <meta property='og:description' content={metadata} />
             <meta name='twitter:title' content={siteTitle} />
             <meta name='twitter:description' content={metadata} />
-            <meta name='twitter:image' content="../assets/icons/say-less-image-graph.jpg" />
+            <meta name='twitter:image' content={openGraphImg}  />
+            <meta name='twitter:card' content={openGraphImg}  />
+            <meta name='twitter:site' content="@theolivewave" />
+
 
           </Helmet>
           <Header headerText={headerText} />
