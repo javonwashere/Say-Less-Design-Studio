@@ -25,10 +25,10 @@ export default () => {
                     <a href="http://www.instagram.com/saylessstudio">
                         <img className="footer-symbol instagram" src={Instagram} />
                     </a>
-                    <a href="http://www.instagram.com/saylessstudio">
+                    <a href="http://www.twitter.com/sayless_studio">
                         <img className="footer-symbol twitter" src={Twitter} />
                     </a>
-                    <a href="http://www.twitter.com/sayless_studio">
+                    <a href="https://www.pinterest.com/randib111/">
                         <img className="footer-symbol pinterest" src={Pinterest} />
                     </a>
 
