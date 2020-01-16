@@ -29,7 +29,7 @@ class Template extends React.Component {
 
     const reactHelmet = (
       <Helmet title={siteTitle} defer={false}>
-        <title>Say Less Design Studio"</title>
+        <title>Say Less Design Studio</title>
         <meta content={metadata} name="description" />
         <meta property="og:url" content="https://sayless.studio" />
         <meta property="og:type" content="website" />
@@ -40,7 +40,7 @@ class Template extends React.Component {
         <meta name='twitter:description' content={metadata} />
         <meta name='twitter:image' content={`https://sayless.studio${openGraphImg}`} />
         <meta name='twitter:card' content={`https://sayless.studio${openGraphImg}`} />
-        <meta name='twitter:site' content="@theolivewave" />
+        <meta name='twitter:site' content="@sayless_studio" />
       </Helmet>
     )
 
