@@ -26,13 +26,13 @@ class RootIndex extends React.Component {
             <meta content={metadata} name="description" />
             <meta property="og:url" content="https://sayless.studio" />
             <meta property="og:type" content="website" />
-            <meta property="og:image" content={openGraphImg} />
+            <meta property="og:image" content={`https://sayless.studio${openGraphImg}`} />
             <meta property="og:title" content={siteTitle} />
             <meta property='og:description' content={metadata} />
             <meta name='twitter:title' content={siteTitle} />
             <meta name='twitter:description' content={metadata} />
-            <meta name='twitter:image' content={openGraphImg}  />
-            <meta name='twitter:card' content={openGraphImg}  />
+            <meta name='twitter:image' content={`https://sayless.studio${openGraphImg}`}  />
+            <meta name='twitter:card' content={`https://sayless.studio${openGraphImg}`}  />
             <meta name='twitter:site' content="@theolivewave" />
           </Helmet>
           <Header headerText={headerText} />
