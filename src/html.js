@@ -6,14 +6,14 @@ export default function HTML(props) {
   const siteMetadata = {
     title: 'Say Less Design Studio',
     description: "Say Less is a Digital Design Studio helmed by Philadelphia, PA based creatives Cheyenne Jacobs and Randi Bellamy",
-    url: "http://www.sayless.studio", // No trailing slash allowed!
+    url: "https://www.sayless.studio", // No trailing slash allowed!
     image: "image", // Path to your image you placed in the 'static' folder
     twitterUsername: "@sayless_studio",
   }
   return (
     <html {...props.htmlAttributes}>
       <head>
-      <title>Say Less Design Studio</title>
+        <title>Say Less Design Studio</title>
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta
