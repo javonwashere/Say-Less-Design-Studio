@@ -30,19 +30,6 @@ class Template extends React.Component {
     const templateBody = (props) => {
       return (
         <body style={props}>
-          <Helmet title={siteTitle} defer={false}>
-            <meta content={metadata} name="description" />
-            <meta property="og:url" content="https://sayless.studio" />
-            <meta property="og:type" content="website" />
-            <meta property="og:image" content={`https://sayless.studio${openGraphImg}`} />
-            <meta property="og:title" content={siteTitle} />
-            <meta property='og:description' content={metadata} />
-            <meta name='twitter:title' content={siteTitle} />
-            <meta name='twitter:description' content={metadata} />
-            <meta name='twitter:image' content={`https://sayless.studio${openGraphImg}`} />
-            <meta name='twitter:card' content={`https://sayless.studio${openGraphImg}`} />
-            <meta name='twitter:site' content="@sayless_studio" />
-          </Helmet>
           <Navigation />
           <Container>
             {children}

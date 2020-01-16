@@ -36,11 +36,6 @@ class RootIndex extends React.Component {
           <meta name='twitter:card' content={`https://sayless.studio${openGraphImg}`} />
           <meta name='twitter:site' content="@theolivewave" />
         </Helmet> */}
-        <head>
-          <link href="dist/lity.css" rel="stylesheet" />
-          <script src="vendor/jquery.js"></script>
-          <script src="dist/lity.js"></script>
-        </head>
         <Layout location={this.props.location} >
           <div style={{ background: '#fff', display: 'flex', flexDirection: 'column' }}>
             <Header headerText={headerText} noFade />
