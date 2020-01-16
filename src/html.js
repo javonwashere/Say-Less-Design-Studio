@@ -21,17 +21,16 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         <meta content={siteMetadata.description} name="description" />
-        <meta property="og:url" content="https://sayless.studio" />
+        <meta property="og:url" content={siteMetadata.url} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={`https://sayless.studio${image}`} />
+        <meta property="og:image" content={`${siteMetadata.url}${image}`} />
         <meta property="og:title" content={siteMetadata.title} />
         <meta property='og:description' content={siteMetadata.description} />
         <meta name='twitter:title' content={siteMetadata.title} />
         <meta name='twitter:description' content={siteMetadata.description} />
-        <meta name='twitter:image' content={`https://sayless.studio${image}`} />
-        <meta name='twitter:card' content={`https://sayless.studio${image}`} />
-        <meta name='twitter:site' content={twitterUsername} />
-
+        <meta name='twitter:image' content={`${siteMetadata.url}${image}`} />
+        <meta name='twitter:card' content={`${siteMetadata.url}${image}`} />
+        <meta name='twitter:site' content={siteMetadata.twitterUsername} />
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
