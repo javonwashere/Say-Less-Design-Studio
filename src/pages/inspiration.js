@@ -22,9 +22,10 @@ class Inspiration extends React.Component {
     const images = () => {
       return masonryGrid.map(image => {
         return (
-        <Zoom>
-          <Img fluid={image.fluid} />
-        </Zoom>)
+          <Zoom>
+            <Img class="inspiration-zoom-class" fluid={image.fluid} />
+          </Zoom>
+        )
       })
     }
 
