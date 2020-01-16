@@ -29,6 +29,7 @@ class Template extends React.Component {
 
     const reactHelmet = (
       <Helmet title={siteTitle} defer={false}>
+        <title>Say Less Design Studio"</title>
         <meta content={metadata} name="description" />
         <meta property="og:url" content="https://sayless.studio" />
         <meta property="og:type" content="website" />
