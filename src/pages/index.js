@@ -9,7 +9,6 @@ import HomeSlideshow from '../components/sayless/index/home-slideshow/home-slide
 import openGraphImg from "../assets/icons/say-less-image-graph.jpg"
 import Layout from '../components/layout'
 import '../pages/index.css'
-import lity from "lity";
 
 
 
