@@ -35,7 +35,7 @@ class RootIndex extends React.Component {
             <meta name='twitter:card' content={`https://sayless.studio${openGraphImg}`}  />
             <meta name='twitter:site' content="@theolivewave" />
           </Helmet>
-          <Header headerText={headerText} />
+          <Header headerText={headerText} noFade />
           <HomeSlideshow />
           <Specialties />
           <FeaturedWorks />

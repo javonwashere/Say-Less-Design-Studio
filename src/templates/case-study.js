@@ -58,7 +58,7 @@ class CaseStudy extends React.Component {
         return (
           <React.Fragment>
             <li className={`client-info-details`} onClick={toggleList}>{serviceCapped}{" +"}
-            {this.state.isToggled && <ul>{serviceCategories}</ul>}
+              {this.state.isToggled && <ul>{serviceCategories}</ul>}
             </li>
           </React.Fragment>
         )
@@ -95,7 +95,7 @@ class CaseStudy extends React.Component {
                 </div>
               </div>
             </div>
-            {modules != null && <Modules props={ caseStudy.modules } name={client}/>}
+            {modules != null && <Modules props={caseStudy.modules} name={client} />}
           </div>
         </div>
       </Layout>
@@ -134,6 +134,7 @@ export const pageQuery = graphql`
         digitalDesign
       }
       modules {
+        ... on Node {
         ... on ContentfulImage {
           id
           internal {
@@ -192,6 +193,7 @@ export const pageQuery = graphql`
           type
         }
       }
+    }
       heroImage {
         fluid(
           maxWidth: 1000, quality: 80
