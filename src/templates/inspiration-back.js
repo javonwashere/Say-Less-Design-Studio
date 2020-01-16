@@ -76,10 +76,16 @@ query {
         title
         masonryGrid {
           fluid {
-            ...GatsbyContentfulFixed_withWebp_noBase64
-        }
+            base64
+            tracedSVG
+            aspectRatio
+            src
+            srcSet
+            srcWebp
+            srcSetWebp
+            sizes
+          }
         }
       }
     }
-  }
-`
+  }`

@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4448b1c7-7d14-4fb5-ac1a-b6275d5e8847" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/case-study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/case-study.js" afterDir="false" />
-    </list>
+    <list default="true" id="4448b1c7-7d14-4fb5-ac1a-b6275d5e8847" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -377,7 +373,7 @@
       <workItem from="1573707530356" duration="2154000" />
       <workItem from="1574090004887" duration="587000" />
       <workItem from="1575147478462" duration="13279000" />
-      <workItem from="1578795951296" duration="5481000" />
+      <workItem from="1578795951296" duration="5570000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1572070738392</created>
@@ -397,7 +393,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84395000" />
+    <option name="totallyTimeSpent" value="84484000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="967" extended-state="0" />
