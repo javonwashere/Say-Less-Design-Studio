@@ -29,7 +29,7 @@ export default function HTML(props) {
         <meta name='twitter:title' content={siteMetadata.title} />
         <meta name='twitter:description' content={siteMetadata.description} />
         <meta name='twitter:image' content={`${siteMetadata.url}${image}`} />
-        <meta name='twitter:card' content="summary" />
+        <meta name='twitter:card' content="summary_large_image" />
         <meta name='twitter:site' content={siteMetadata.twitterUsername} />
         {props.headComponents}
       </head>
