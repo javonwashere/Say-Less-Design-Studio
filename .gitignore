@@ -58,7 +58,8 @@ typings/
 .env
 
 # build folder
-public
+public/*
+!public/assets/
 
 # gatsby cache folder
 .cache

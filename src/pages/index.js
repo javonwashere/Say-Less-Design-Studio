@@ -20,14 +20,29 @@ class RootIndex extends React.Component {
     const headerText = get(this, 'props.data.allContentfulHomePageText.nodes[0].title.title');
 
     return (
-      <Layout location={this.props.location} >
-        <div style={{ background: '#fff', display: 'flex', flexDirection: 'column' }}>
-          <Header headerText={headerText} noFade />
-          <HomeSlideshow />
-          <Specialties />
-          <FeaturedWorks />
-        </div>
-      </Layout>
+      <div>
+        {/* <Helmet title={siteTitle} defer={false}>
+          <meta content={metadata} name="description" />
+          <meta property="og:url" content="https://sayless.studio" />
+          <meta property="og:type" content="website" />
+          <meta property="og:image" content={`https://sayless.studio${openGraphImg}`} />
+          <meta property="og:title" content={siteTitle} />
+          <meta property='og:description' content={metadata} />
+          <meta name='twitter:title' content={siteTitle} />
+          <meta name='twitter:description' content={metadata} />
+          <meta name='twitter:image' content={`https://sayless.studio${openGraphImg}`} />
+          <meta name='twitter:card' content={`https://sayless.studio${openGraphImg}`} />
+          <meta name='twitter:site' content="@theolivewave" />
+        </Helmet> */}
+        <Layout location={this.props.location} >
+          <div style={{ background: '#fff', display: 'flex', flexDirection: 'column' }}>
+            <Header headerText={headerText} noFade />
+            <HomeSlideshow />
+            <Specialties />
+            <FeaturedWorks />
+          </div>
+        </Layout>
+      </div>
     )
   }
 }
