@@ -22,7 +22,7 @@ class RootIndex extends React.Component {
     return (
       <Layout location={this.props.location} >
         <div style={{ background: '#fff', display: 'flex', flexDirection: 'column' }}>
-          <Helmet title={siteTitle}>
+          <Helmet title={siteTitle} defer={false}>
             <meta content={metadata} name="description" />
             <meta property="og:url" content="https://sayless.studio" />
             <meta property="og:type" content="website" />
