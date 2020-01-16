@@ -14,7 +14,7 @@ export default () => {
         const images = allFeaturedWorks.collectionOfWorks.map(({ slug, featuredImage }, key) => {
           return ({ style }) =>
             <animated.div className="slideshow-container" style={{ ...style, position: 'relative' }}>
-              <Link style={{ textDecoration: 'none' }} id={key} to={`/work/${slug}`}><Img fluid={featuredImage.fluid} /></Link>
+              <Link style={{ textDecoration: 'none' }} id={key} to={`/work/${slug}`}><Img fluid={{...featuredImage.fluid, aspectRatio: 16/9 }} /></Link>
             </animated.div>
         });
         return slideShow(images);

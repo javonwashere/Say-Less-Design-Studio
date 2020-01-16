@@ -6,8 +6,7 @@ import numericalSlideshow from './numerical-slideshow/numerical-slideshow';
 import dragSlideshow from './drag-slideshow/drag-slideshow';
 
 export default ({ props }) => {
-  console.log(props, "yo yo yo yo");
-  if (props.slideshowType === "A") {
+  // if (props.slideshowType === "A") {
         // create numerical slideshow 
     const images = props.images.map(({ fluid }, key) => {
       return ({ style }) =>
@@ -21,9 +20,9 @@ export default ({ props }) => {
         {numericalSlideshow(images)}
       </React.Fragment>
     )
-  } else {
+  // } else {
     
-   }
+  //  }
 }
 
 

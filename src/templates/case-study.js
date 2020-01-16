@@ -146,6 +146,8 @@ export const pageQuery = graphql`
               ...GatsbyContentfulFluid_tracedSVG
             }
           }
+          aspectRatio
+          width
           alignment
           featuredImage
           nonFeaturedImagePosition

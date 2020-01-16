@@ -71,14 +71,13 @@
 }
 
 .slideshow-wrapper img {
-    cursor: url('../../../../assets/icons/cursor.png'), auto;	
+    cursor: url('../../../../assets/icons/cursor.png') 40 40, auto;	
 }
 
 .slideshow-wrapper {
     padding: 5vh 0vw;
     width: calc(100% - 10vmin);
     margin: 0 auto;
-    
 }
 
 

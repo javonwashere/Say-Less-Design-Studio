@@ -5,7 +5,6 @@ import Triangle from '../../../../assets/icons/triangle.png'
 
 export default ({ props, name }) => {
     let content;
-    console.log("GIMME MORE", props)
     const text = props.text.text;
     if (props.type != "Header") {
         content = generateHeader(text, name);

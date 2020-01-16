@@ -6,8 +6,6 @@ import Video from "./video/video-module"
 
 
 export default ({ props, name }) => {
-    console.log("GIVE ME THE MODULE", props);
-    console.log("is there anyway I can get the name", name)
 
     const allModules = props.map((module) => {
         const typeName = module.internal != null ? module.internal.type : "default";
@@ -31,10 +29,6 @@ export default ({ props, name }) => {
         }
         return content;
     })
-
-    console.log(allModules);
-
-
 
     return (
         <div className="case-study-modules">
