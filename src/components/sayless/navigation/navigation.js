@@ -3,6 +3,8 @@ import { Link } from 'gatsby'
 import './navigation.css'
 import './hamburgs.css'
 import SaylessSymbol from '../../../assets/icons/sayless-symbol.png'
+import SaylessSymbol2 from '../../../assets/icons/sl-icon.png'
+
 import Menu from './menu'
 import { Transition } from "react-spring/renderprops-universal";
 
@@ -41,7 +43,7 @@ export default () => {
       <container className="nav-container">
         <div className="navigationWrapper">
           <div className="navigationList">
-            <Link style={{ zIndex: 1000 }} to="/"><img className="sayless-symbol" src={SaylessSymbol} /></Link>
+            <Link style={{ zIndex: 1000 }} to="/"><img className="sayless-symbol" src={SaylessSymbol2} /></Link>
             <div className="navigationItem" onClick={toggleMenu}>
               <div>
                 {MenuBar}

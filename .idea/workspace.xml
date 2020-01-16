@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4448b1c7-7d14-4fb5-ac1a-b6275d5e8847" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +41,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/sayless/index/featured-works/featured-works.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="990">
-              <caret line="75" column="108" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="108" />
+              <caret line="74" column="108" selection-start-line="74" selection-start-column="31" selection-end-line="74" selection-end-column="108" />
               <folding>
                 <element signature="e#0#58#0" expanded="true" />
               </folding>
@@ -63,7 +65,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/sayless/index/home-slideshow/home-slideshow.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="361">
-              <caret line="66" column="44" selection-start-line="66" selection-start-column="44" selection-end-line="66" selection-end-column="44" />
+              <caret line="66" column="10" selection-start-line="66" selection-start-column="10" selection-end-line="66" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -375,7 +377,7 @@
       <workItem from="1573707530356" duration="2154000" />
       <workItem from="1574090004887" duration="587000" />
       <workItem from="1575147478462" duration="13279000" />
-      <workItem from="1578795951296" duration="4855000" />
+      <workItem from="1578795951296" duration="5072000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1572070738392</created>
@@ -395,7 +397,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83769000" />
+    <option name="totallyTimeSpent" value="83986000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="967" extended-state="0" />
@@ -746,7 +748,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/sayless/index/featured-works/featured-works.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="990">
-          <caret line="75" column="108" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="108" />
+          <caret line="74" column="108" selection-start-line="74" selection-start-column="31" selection-end-line="74" selection-end-column="108" />
           <folding>
             <element signature="e#0#58#0" expanded="true" />
           </folding>
@@ -820,7 +822,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/sayless/index/home-slideshow/home-slideshow.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
-          <caret line="66" column="44" selection-start-line="66" selection-start-column="44" selection-end-line="66" selection-end-column="44" />
+          <caret line="66" column="10" selection-start-line="66" selection-start-column="10" selection-end-line="66" selection-end-column="10" />
         </state>
       </provider>
     </entry>

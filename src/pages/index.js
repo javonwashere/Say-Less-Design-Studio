@@ -24,9 +24,9 @@ class RootIndex extends React.Component {
         <div style={{ background: '#fff', display: 'flex', flexDirection: 'column' }}>
           <Helmet title={siteTitle}>
             <meta content={metadata} name="description" />
+            <meta property="og:url" content="https://sayless.studio" />
             <meta property="og:type" content="website" />
             <meta property="og:image" content={openGraphImg} />
-            <meta property="og:url" content="https://sayless.studio" />
             <meta property="og:title" content={siteTitle} />
             <meta property='og:description' content={metadata} />
             <meta name='twitter:title' content={siteTitle} />
@@ -34,8 +34,6 @@ class RootIndex extends React.Component {
             <meta name='twitter:image' content={openGraphImg}  />
             <meta name='twitter:card' content={openGraphImg}  />
             <meta name='twitter:site' content="@theolivewave" />
-
-
           </Helmet>
           <Header headerText={headerText} />
           <HomeSlideshow />

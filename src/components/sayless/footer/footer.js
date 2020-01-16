@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import SaylessLogo from '../../../assets/icons/sayless-logo.png'
+import SaylessLogo2 from '../../../assets/icons/sl-studio-image.png'
+
 import Twitter from '../../../assets/icons/twitter.svg'
 import Instagram from '../../../assets/icons/instagram.svg'
 import Pinterest from '../../../assets/icons/pinterest.svg'
@@ -12,7 +14,7 @@ export default () => {
         <div className="footer-container">
             <div className="footer-wrapper">
                 <div className="footer-logo-wrapper">
-                    <img className="footer-logo" src={SaylessLogo} />
+                    <img className="footer-logo" src={SaylessLogo2} />
                 </div>
                 <div className="footer-navigation">
                     <div><a href={`/work`}>Works</a></div>
