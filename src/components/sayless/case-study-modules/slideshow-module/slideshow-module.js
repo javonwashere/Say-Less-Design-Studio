@@ -11,7 +11,7 @@ export default ({ props }) => {
     const images = props.images.map(({ fluid }, key) => {
       return ({ style }) =>
         <animated.div className="slideshow-container" style={{ ...style, position: 'relative' }}>
-          <Img fluid={fluid} />
+          <Img fluid={ {...fluid, aspectRatio: 16/9 }} />
         </animated.div>
     });
 

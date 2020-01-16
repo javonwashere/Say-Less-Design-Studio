@@ -6,6 +6,7 @@ import Img from 'gatsby-image'
 import { Link } from "gatsby";
 import './inspiration.css'
 import Masonry from 'react-masonry-css'
+import SayLessIcon from '../assets/icons/sayless-logo.png'
 import Inspo1 from '../assets/inspiration-images/Inspo-1.jpg';
 import Inspo2 from '../assets/inspiration-images/Inspo-2.jpg';
 import Inspo3 from '../assets/inspiration-images/Inspo-3.jpg';
@@ -20,48 +21,27 @@ import Inspo8 from '../assets/inspiration-images/Inspo-8.jpg'
 class Inspiration extends React.Component {
     render() {
         // console.log(get(this, "props"));
-        // const caseStudiesData = get(this, "props.data.allContentfulCaseStudy.edges");
-        // console.log(caseStudiesData)
+        const inspoPageData = get(this, "props.data.allContentfulInspirationPage.nodes[0]");
+        const { title, masonryGrid } = inspoPageData
+
+        console.log(masonryGrid);
+
+        const images = () => {
+           return masonryGrid.map(image => <Img fluid={image.fluid} />)
+        }
 
         return (
             <Layout>
                 <div className="inspiration-container">
-                    <div className="inspiration-title"><h1>Say Less</h1></div>
-                    <div className="inspiration-text">We are Randi Bellamy and Cheyenne Jacobs. We began working together in 2016, and formed Say Less Design Studio in September 2019. We combine our backgrounds in design, illustration, and photography to create lasting impressions, both tactile and digital..</div>
-                    <div className="inspiration-images-grid">
-                        <div className="row-1">
-                            <div className="column-1-left">
-                                <img src={Inspo1} />
-                            </div>
-                            <div className="column-1-right">
-                                <div className="inner-1-row-upper">
-                                    <img src={Inspo2} />
-                                </div>
-                                <div className="inner-1-row-lower">
-                                    <img src={Inspo3} />
-                                    <img src={Inspo4} />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row-2">
-                            <div className="column-2-left">
-                                <img src={Inspo5} />
-                            </div>
-                            <div className="column-2-right">
-                                <div className="inner-2-row-upper">
-                                    <img src={Inspo7} />
-                                </div>
-                                <div className="inner-2-row-lower">
-                                    <img src={Inspo6} />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row-3">
-                            <img src={Inspo8} />
-                        </div>
-                    </div>
+                    <div className="inspiration-title"><h1>{title}.</h1></div>
+                    <Masonry
+                        breakpointCols={3}
+                        className="my-masonry-grid"
+                        columnClassName="my-masonry-grid_column">
+                        {images()}
+                    </Masonry>
                 </div>
-            </Layout>
+            </Layout >
         )
     }
 }
@@ -76,7 +56,7 @@ query {
         title
         masonryGrid {
           fluid {
-            ...GatsbyContentfulFixed_withWebp_noBase64
+            ...GatsbyContentfulFluid_tracedSVG
         }
         }
       }

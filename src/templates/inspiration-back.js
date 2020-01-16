@@ -69,23 +69,21 @@ class Inspiration extends React.Component {
 
 export default Inspiration;
 
-export const pageQuery = graphql`
-query {
-    allContentfulInspirationPage {
-      nodes {
-        title
-        masonryGrid {
-          fluid {
-            base64
-            tracedSVG
-            aspectRatio
-            src
-            srcSet
-            srcWebp
-            srcSetWebp
-            sizes
-          }
-        }
-      }
-    }
-  }`
+// export const pageQuery = graphql`
+// query {
+//         allContentfulCaseStudy {
+//         edges {
+//         node {
+//         client
+//           slug
+//           heroImage {
+//         fluid {
+//         ...GatsbyContentfulFluid_tracedSVG
+//       }
+//       }
+//     }
+//   }
+// }
+// }
+
+// `
