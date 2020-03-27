@@ -41,7 +41,7 @@ export default function Contact() {
         setServerState({ submitting: true });
         axios({
             method: "post",
-            url: "https://getform.io/f/d0b871a4-8db0-4eda-bc8a-64a530534984",
+            url: "https://getform.io/f/5b2c2ec3-360b-4853-b90e-4dfbfd347ab0",
             data: new FormData(form)
         })
             .then(r => {
