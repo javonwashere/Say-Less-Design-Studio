@@ -1,30 +1,54 @@
 .textbox-wrapper {
-    margin: 0px auto;
-    display: flex;
-    flex-direction: column;
-    padding: 10vh 4vw;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  padding: 10vh 4vw;
 }
 
 .textbox-wrapper h1 {
-    font-size: 7vw;
+  font-size: 4vw;
 }
 
 .textbox-wrapper.head {
-    text-align: center;
+  text-align: center;
 }
 
 .textbox-triangle-header img {
-    width: 1vw;
-    margin: 0px auto;
+  width: 1vw;
+  margin: 0px auto;
 }
 
 .textbox-triangle-quote img {
-    width: 1vw;
+  width: 1vw;
 }
 
 .textbox-client-quote {
-    font-family: "Altero", Tahoma, Arial, Helvetica, sans-serif;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    font-size: 1.2vw;
+  font-family: 'Altero', Tahoma, Arial, Helvetica, sans-serif;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-size: 1.2vw;
+}
+
+@media screen and (max-width: 400px) {
+  .textbox-wrapper h1 {
+    font-size: 7vw;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 720px) {
+  .textbox-wrapper h1 {
+    font-size: 7vw;
+  }
+}
+
+@media screen and (min-width: 721px) and (max-width: 1280px) {
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1440px) {
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+}
+
+@media screen and (min-width: 1921px) {
 }
