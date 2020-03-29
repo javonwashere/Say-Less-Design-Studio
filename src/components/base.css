@@ -64,7 +64,9 @@
 
 
 @media screen and (max-width: 400px) {
-
+  .client-info-text {
+    font-size: 2vw;
+  }
 }
 
 @media screen and (min-width: 401px) and (max-width: 720px) {

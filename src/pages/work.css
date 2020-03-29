@@ -1,0 +1,76 @@
+.works-container {
+    margin: 0 auto;
+    margin-bottom: 8vh;
+}
+
+.works-wrapper {
+    width: calc(100% - 10vmin);
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.works-title{
+    max-width: 1180px;
+    margin: 0 auto;
+    width: calc(100% - 10vmin);
+}
+
+.case-study {
+    width: 45%;
+    padding: 2vh 0;
+}
+
+div.case-study-client-title {
+    padding-top: 1vh;
+    color: rgb(212, 191, 171);
+    text-decoration: none;
+    font-family: "Altero", Tahoma, Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 0.7vw;
+    padding-right: 5vw;
+}
+
+div.case-study-client-name {
+    text-transform: none;
+    text-decoration: none;
+    font-size: 1.2vw;
+    padding-right: 5vw;
+}
+
+
+@media screen and (max-width: 400px) {
+    div.case-study-client-name {
+      font-size: 3vw;
+    }
+    div.case-study-client-title {
+        font-size: 2vw;
+    }
+  }
+  
+  @media screen and (min-width: 401px) and (max-width: 720px) {
+    div.case-study-client-name {
+        font-size: 3vw;
+      }
+      div.case-study-client-title {
+          font-size: 2vw;
+      }
+  }
+  
+  @media screen and (min-width: 721px) and (max-width: 1280px) {
+  
+  }
+  
+  @media screen and (min-width: 1281px) and (max-width: 1440px) {
+  
+  }
+  
+  @media screen and (min-width: 1441px) and (max-width: 1920px) {
+  
+  }
+  
+  @media screen and (min-width: 1921px) {
+  
+  }

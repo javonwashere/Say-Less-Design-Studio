@@ -5,17 +5,17 @@ import './header.css'
 
 const config = { mass: 5, tension: 1000, friction: 200 };
 
-export default ({ headerText }) => {
+export default ({ headerText, noFade }) => {
 
   const items = headerText.split("\n");
 
   const [toggle, set] = useState(true);
   const trail = useTrail(items.length, {
     config,
-    opacity: toggle ? 1 : 0,
-    x: toggle ? 0 : 20,
+    opacity: !!noFade ? 1 : (toggle ? 1 : 0),
+    x: !!noFade ? 0 : (toggle ? 0 : 20),
     // height: toggle ? 10 : 0,
-    minHeight: toggle ? "100%" : "0%",
+    minHeight: !!noFade ? "100%" : (toggle ? "100%" : "0%"),
     from: { opacity: 0, x: 20, minHeight: "0" },
   })
 

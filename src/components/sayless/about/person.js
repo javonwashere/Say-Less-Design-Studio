@@ -1,7 +1,7 @@
 import React from "react";
 import Img from 'gatsby-image'
-import ArrowLeft from '../../../assets/icons/arrow-left.png'
-import ArrowRight from '../../../assets/icons/arrow-right.png'
+import ArrowLeft from '../../../assets/icons/arrow-left.svg'
+import ArrowRight from '../../../assets/icons/arrow-right.svg'
 import {Spring} from "react-spring/renderprops-universal";
 
 export default ({ person, handleRightClick, handleLeftClick }) =>  {
@@ -30,8 +30,8 @@ export default ({ person, handleRightClick, handleLeftClick }) =>  {
             <div className="about-person-paragraph">
               <div className="about-person-title"><h4>{person.node.title}</h4></div>
               <div className="about-person-bio">{person.node.shortBio.shortBio}</div>
-              <div className="about-person-insta"><a href={person.node.instagram}>{person.node.instagram}</a></div>
-             <div className="about-person-website"><a href={person.node.website}>{person.node.website}</a></div>
+              <div className="about-person-insta"><a href={`http://${person.node.instagram}`}>{person.node.instagram}</a></div>
+             <div className="about-person-website"><a href={`http://${person.node.website}` }>{person.node.website}</a></div>
             </div>
           <div className="about-person-name-container">
             {firstAndLastName(nameObj)}

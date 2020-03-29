@@ -1,9 +1,12 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import './navigation.css'
+import './hamburgs.css'
 import SaylessSymbol from '../../../assets/icons/sayless-symbol.png'
+import SaylessSymbol2 from '../../../assets/icons/sl-icon.png'
+
 import Menu from './menu'
-import {Transition} from "react-spring/renderprops-universal";
+import { Transition } from "react-spring/renderprops-universal";
 
 export default () => {
   const [menuToggle, setMenuToggle] = useState(true);
@@ -13,34 +16,42 @@ export default () => {
     setMenuToggle(!menuToggle);
   }
 
+  const MenuBar = (
+    <React.Fragment>
+      <div className="menu-bar"></div>
+      <div className="menu-bar"></div>
+      <div className="menu-bar"></div>
+    </React.Fragment>
+  )
+
+
   return (
-  <nav className="navigation">
-    {
-      <Transition
-            items={menuToggle}
-            from={{ position: 'absolute', opacity: 0 }}
-            enter={{ opacity: 1 }}
-            leave={{ opacity: 0 }}>
+    <nav className="navigation">
+      {
+        <Transition
+          items={menuToggle}
+          from={{ position: 'absolute', opacity: 0 }}
+          enter={{ opacity: 1 }}
+          leave={{ opacity: 0 }}>
           {menuToggle =>
-              menuToggle
-                  ? props => <div style={props}></div>
-                  : props => <Menu style={props} toggleMenu={toggleMenu} />
+            menuToggle
+              ? props => <div style={props}></div>
+              : props => <Menu style={props} toggleMenu={toggleMenu} />
           }
-          </Transition>
-    }
-    <container className="nav-container">
-    <ul className="navigationList">
-      <li className="navigationItem">
-        <Link style={{ zIndex: 1000 }} to="/"><img className="sayless-symbol navigationButton" src={SaylessSymbol}/></Link>
-      </li>
-      <li className="navigationItem navigationButton" onClick={toggleMenu}>
-        <div>
-          <div className="menu-bar"></div>
-          <div className="menu-bar"></div>
-          <div className="menu-bar"></div>
+        </Transition>
+      }
+      <container className="nav-container">
+        <div className="navigationWrapper">
+          <div className="navigationList">
+            <Link style={{ zIndex: 1000 }} to="/"><img className="sayless-symbol" src={SaylessSymbol2} /></Link>
+            <div className="navigationItem" onClick={toggleMenu}>
+              <div>
+                {MenuBar}
+              </div>
+            </div>
+          </div>
         </div>
-      </li>
-    </ul>
-    </container>
-  </nav>
-)}
+      </container>
+    </nav >
+  )
+}

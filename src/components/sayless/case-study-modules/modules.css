@@ -1,0 +1,42 @@
+.case-study-modules {
+    display: flex;
+    flex-direction: column;
+}
+
+.two-img-wrapper {
+    margin: 7vh 0;
+    /* padding: 15vh 0vw; */
+}
+
+.one-img-wrapper {
+    margin: 7vh 0;
+}
+
+.two-img-wrapper {
+    display: flex;
+    flex-direction: row;
+    /* padding: 15vh 0vw; */
+}
+
+.left-img, .right-img {
+    width: 50%;
+    height: 50%;
+}
+
+.left-img {
+    margin-right: 2vw;
+}
+
+.right-img {
+    margin-left: 2vw;
+}
+
+
+.full-width {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}

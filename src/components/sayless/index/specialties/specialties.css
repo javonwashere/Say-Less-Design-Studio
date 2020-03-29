@@ -1,6 +1,6 @@
 .specialties-container {
     display: flex;
-    margin-top: 10vh;
+    margin-bottom: 5vh;
     }
 
 .specialties-grid {
@@ -29,18 +29,43 @@
     align-self: end;
 }
 
-.specialty-child-title, .specialty-child-about-us {
+.specialty-child-title {
     grid-column: 1 / span 2;
     font-size: 1.2em;
 }
 
+.specialty-child-title {
+    grid-column: 1 / span 2;
+    font-size: 1.2em;
+}
+
+.specialties-title h2 {
+    margin: 0
+}
+
 .specialty-child-about-us {
-    align-self: center;
+    align-self: end;
     max-width: 5vw;
     justify-self: end;
     grid-template-rows: .5fr;
     padding-right: 2vw;
+    position: relative;
+    margin-top: 2vh;
 }
+
+.specialty-child-about-us-arrow {
+    position: absolute;
+}
+
+.specialty-child-about-us-text {
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+    transform-origin: 25% 27%;
+
+}
+
+
 
 .specialty-item-detail-left, .specialty-item-detail-right {
     font-family: "Untitled Sans", sans-serif;
@@ -56,7 +81,6 @@
 
 .inner-text {
     transform: translateY(-1em);
-    font-size: 1vw;
 }
 
 div sup {
@@ -72,6 +96,9 @@ div sup {
 }
 
 
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
 
 
@@ -88,6 +115,10 @@ div sup {
     .specialty-child-about-us {
         max-width: 10vw;
     }
+
+    .specialties-title {
+        font-size: 3vw;
+    }
 }
 
 @media screen and (min-width: 401px) and (max-width: 720px) {
@@ -95,10 +126,25 @@ div sup {
         padding-right: 8vw;
     }
 
+    .specialties-title {
+        font-size: 2vw;
+    }
+
+    .inner-text {
+        font-size: 2.3vw;
+    }
+
 }
 
 @media screen and (min-width: 721px) and (max-width: 1280px) {
 
+    .specialties-title {
+        font-size: 3vw;
+    }
+
+    .inner-text {
+        font-size: 2.4vw;
+    }
 }
 
 @media screen and (min-width: 1281px) and (max-width: 1440px) {

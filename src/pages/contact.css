@@ -1,0 +1,141 @@
+textarea, 
+input[type="email"], 
+input[type="password"], 
+input[type="tel"], 
+input[type="text"],   
+input[type="number"], 
+input[type="url"] {
+  font-family: "Untitled Sans", sans-serif;
+  height: 38px; 
+  border-radius: 0px;
+  border: rgb(166, 126, 46) solid 2px;
+  box-shadow: none;
+  font-weight: 400;
+  width: 50%;
+}
+
+button[type="submit"]{
+  background: transparent;
+  border: solid 2px rgb(166, 126, 46);
+  font-weight: normal;
+  color:rgb(166, 126, 46);
+  width: 150px;
+  height: 50px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.contact-address, .contact-phone, .contact-email {
+  font-family: "Untitled Sans", sans-serif;
+    /* font-weight: bold; */
+  padding-bottom: 2vh
+}
+
+label {
+  font-family: "Untitled Sans", sans-serif;
+  /* text-transform: uppercase; */
+}
+
+textarea {
+  height: 115px;
+}
+
+.contact-wrapper {
+  min-height: 80vh;
+  width: calc(100% - 10vmin);
+  margin: 0 auto;
+}
+
+.contact-header {
+  font-size: 4.5vw;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.contact-info div {
+  width: 30%;
+  margin: 0 1vw;
+  border-top: 1px solid rgb(166, 126, 46);
+}
+
+/* form {
+  display: flex;
+  flex-direction: column;
+}
+
+form p {
+  width: 100%;
+} */
+
+
+@media screen and (max-width: 400px) {
+  textarea, 
+input[type="email"], 
+input[type="password"], 
+input[type="tel"], 
+input[type="text"],   
+input[type="number"], 
+input[type="url"] {
+  width: 100%;
+} 
+h1.contact-header {
+  font-size: 4vw;
+}
+.contact-info div h2 {
+  font-size: 5.5vw;
+}
+.contact-info div {
+  font-size: 3.7vw;
+}
+}
+
+@media screen and (min-width: 401px) and (max-width: 720px) {
+  textarea, 
+input[type="email"], 
+input[type="password"], 
+input[type="tel"], 
+input[type="text"],   
+input[type="number"], 
+input[type="url"] {
+  width: 80%;
+}
+.contact-info div {
+  width: 100%;
+}
+h1.contact-header {
+  font-size: 4vw;
+}
+.contact-info div h2 {
+  font-size: 6vw;
+}
+.contact-info div {
+  font-size: 4vw;
+}
+}
+
+@media screen and (min-width: 721px) and (max-width: 1280px) {
+  textarea, 
+input[type="email"], 
+input[type="password"], 
+input[type="tel"], 
+input[type="text"],   
+input[type="number"], 
+input[type="url"] {
+  width: 70%;
+}
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1440px) {
+
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+
+}
+
+@media screen and (min-width: 1921px) {
+
+}

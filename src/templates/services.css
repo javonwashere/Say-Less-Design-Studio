@@ -1,0 +1,98 @@
+/* breakpoint in pixels for responsive */
+/* dropdown Menu core scss */
+ul.client-info-services-list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 100;
+}
+ul.client-info-services-list li {
+    position: relative;
+    display: inline-block;
+    width: max-content;
+}
+ul.client-info-services-list li:hover > ul {
+    display: inherit;
+}
+ul.client-info-services-list li:hover > ul li {
+    display: list-item;
+}
+ul.client-info-services-list li a {
+    display: block;
+}
+ul.client-info-services-list li ul {
+
+    display: none;
+    /* position: absolute; */
+   /* optional: submenu is same width than parent entry width */
+    min-width: 100%;
+   /* optional: submenu background color */
+    /* background-color: white; */
+    z-index: 1000;
+    list-style: none;
+    /* transform: translateX(2vw) */
+}
+ul.client-info-services-list li ul ul {
+    left: 100%;
+    top: 0;
+}
+/* Responsiveness core scss */
+/* @media (max-width: 980px) {
+    ul.client-info-services-list {
+        display: inherit;
+   }
+    ul.client-info-services-list:first-child:before {
+        background-color: #222;
+        content: 'MENU';
+        display: block;
+        padding: 1rem;
+        color: #fff;
+        text-align: right;
+   }
+    ul.client-info-services-list:active li, ul:focus li, ul:hover li {
+        display: list-item;
+   }
+    ul.client-info-services-list li {
+        display: none;
+        background-color: #aaa;
+   }
+    ul.client-info-services-list li ul {
+        position: relative;
+        min-width: auto;
+        display: inherit;
+        border-top: 2px solid #999;
+   }
+    ul.client-info-services-list li ul li {
+        display: block;
+   }
+    ul.client-info-services-list li ul li a {
+        position: relative;
+   }
+    ul.client-info-services-list li ul li a:before {
+        content: '';
+        padding-left: 1.5%;
+   }
+    ul.client-info-services-list li ul li ul {
+        left: 0;
+   }
+} */
+/* ------------- optional styling below ------------ */
+/* Following declarations are OPTIONAL */
+/* a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px;
+}
+a:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+li > a:after {
+    content: ' +';
+    float: right;
+    margin-left: 5px;
+}
+li > a:only-child:after {
+    content: '';
+} */
