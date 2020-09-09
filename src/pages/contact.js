@@ -69,7 +69,7 @@ export default function Contact() {
                         </div>
                         <div className="contact-email">
                             <h2>Email:</h2>
-                            saylessdesignstudio@gmail.com
+                            info@sayless.studio
                         </div>
                     </div>
                 </div>
