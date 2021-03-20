@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react'
 import Img from 'gatsby-image'
-import { Link } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 
 
 import './featured-works.css'
@@ -72,7 +72,7 @@ const works = (collectionOfWorks) => {
   return (
     <div className="feat-table">
       <div className="work-rows" ref={imageContainer}>
-        {imagesArray[index] && <Img className="work-image" fluid={imagesArray[index].featuredImage.fluid} />}
+        {imagesArray[index] && <Img className="work-image" fluid={imagesArray[index].featuredImage} />}
         {workRows}
       </div>
     </div>

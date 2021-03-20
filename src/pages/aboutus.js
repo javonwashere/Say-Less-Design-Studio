@@ -60,9 +60,9 @@ class AboutUs extends React.Component {
               <source src={aboutUsVideo.file.url} type={aboutUsVideo.file.contentType} />
             </video>
           </div>
-          <div className="about-capabilities-wrapper">
+          {/* <div className="about-capabilities-wrapper">
           {addStylingToCapabilities(aboutUsCapabilities)}
-          </div>
+          </div> */}
           <hr />
           <People className="about-people" people={aboutUsPeople} />
         </div>
@@ -124,15 +124,7 @@ export const pageQuery = graphql`
             contentType
           }
         }
-        childContentfulAboutCapabilitiesRichTextNode {
-          json
-           content {
-            content {
-              value
-              nodeType
-            }
-          }
-        }
+        
       }
     }
   }

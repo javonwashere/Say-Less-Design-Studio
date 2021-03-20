@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react'
 import Img from 'gatsby-image'
-import { Link } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import { useTransition, animated } from 'react-spring'
 import './home-slideshow.css'
 import { StaticQuery } from 'gatsby'
@@ -12,6 +12,7 @@ export default () => {
       render={(data) => {
         const allFeaturedWorks = data.allContentfulFeaturedWorks.edges[0].node;
         const images = allFeaturedWorks.collectionOfWorks.map(({ slug, featuredImage }, key) => {
+          console.log("test", slug, featuredImage);
           return ({ style }) =>
             <animated.div className="slideshow-container" style={{ ...style, position: 'relative' }}>
               <Link style={{ textDecoration: 'none' }} id={key} to={`/work/${slug}`}><Img fluid={{...featuredImage.fluid, aspectRatio: 16/9 }} /></Link>

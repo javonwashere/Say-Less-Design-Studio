@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 import './contact.css'
 
 
-export default ( props ) => {
+const Thanks = ( props ) => {
   console.log(props, "nigga");
   // let name;
   // if(location.state != null) {
@@ -21,3 +21,5 @@ export default ( props ) => {
     </Layout>
   )
 }
+
+export default Thanks;
