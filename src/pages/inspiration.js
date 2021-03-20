@@ -59,7 +59,7 @@ export const pageQuery = graphql`
         title
         masonryGrid {
           fluid {
-            ...GatsbyContentfulFluid_tracedSVG
+            ...GatsbyContentfulFluid 
           }
         }
       }

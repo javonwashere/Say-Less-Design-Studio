@@ -21,9 +21,8 @@ class AboutUs extends React.Component {
 
       console.log(aboutUsVideo)
       const aboutUsDescription = data.allContentfulAbout.edges[0].node.aboutUsDescription.aboutUsDescription
-      const aboutUsCapabilities = data.allContentfulAbout.edges[0].node.childContentfulAboutCapabilitiesRichTextNode.json
+      const aboutUsCapabilities = data.allContentfulAbout.edges[0].node.capabilities.raw
       const aboutUsPeople = data.allContentfulPerson.edges;
-      
 
       const aboutUsText = () => {
         const splitText = "Say Less is a *Digital Design Studio ."
@@ -60,9 +59,9 @@ class AboutUs extends React.Component {
               <source src={aboutUsVideo.file.url} type={aboutUsVideo.file.contentType} />
             </video>
           </div>
-          {/* <div className="about-capabilities-wrapper">
+          <div className="about-capabilities-wrapper">
           {addStylingToCapabilities(aboutUsCapabilities)}
-          </div> */}
+          </div>
           <hr />
           <People className="about-people" people={aboutUsPeople} />
         </div>
@@ -78,7 +77,7 @@ class AboutUs extends React.Component {
         },
       };
       console.log("capabilities", data);
-      return documentToReactComponents(data, options)
+      return documentToReactComponents(JSON.parse(data), options)
     }
 
 
@@ -124,7 +123,9 @@ export const pageQuery = graphql`
             contentType
           }
         }
-        
+        capabilities {
+          raw
+        }
       }
     }
   }

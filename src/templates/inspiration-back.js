@@ -78,7 +78,7 @@ export default Inspiration;
 //           slug
 //           heroImage {
 //         fluid {
-//         ...GatsbyContentfulFluid_tracedSVG
+//         ...GatsbyContentfulFluid 
 //       }
 //       }
 //     }

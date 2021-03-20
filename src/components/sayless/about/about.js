@@ -99,7 +99,7 @@
 //             fluid(
 //               maxWidth: 500
 //             ) {
-//               ...GatsbyContentfulFluid_tracedSVG
+//               ...GatsbyContentfulFluid 
 //             }
 //           }
 //         }

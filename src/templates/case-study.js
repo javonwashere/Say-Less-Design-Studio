@@ -144,7 +144,7 @@ export const pageQuery = graphql`
             fluid(
               maxWidth: 1000, quality: 80
             ) {
-              ...GatsbyContentfulFluid_tracedSVG
+              ...GatsbyContentfulFluid 
             }
           }
           aspectRatio
@@ -177,7 +177,7 @@ export const pageQuery = graphql`
             fluid(
               maxWidth: 1000, quality: 80
             ) {
-              ...GatsbyContentfulFluid_tracedSVG
+              ...GatsbyContentfulFluid 
             }
           }
           slideshowType
@@ -198,7 +198,7 @@ export const pageQuery = graphql`
         fluid(
           maxWidth: 1000, quality: 80
         ) {
-          ...GatsbyContentfulFluid_tracedSVG
+          ...GatsbyContentfulFluid 
         }
       }
       slug

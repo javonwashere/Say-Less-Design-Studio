@@ -96,7 +96,7 @@ export const pageQuery = graphql`
                 fluid(
                   maxHeight: 500, quality: 70
                 ) {
-                  ...GatsbyContentfulFluid_tracedSVG
+                  ...GatsbyContentfulFluid 
                 }
               }
             }
