@@ -13,12 +13,15 @@ class Template extends React.Component {
 
 
   render() {
-    const { location, children } = this.props
+    const { location, children, landing, useLandingBoolean } = this.props
+    console.log("What is the boolean", useLandingBoolean)
     let rootPath = `/`
     if (typeof __PREFIX_PATHS__ !== `undefined` && __PREFIX_PATHS__) {
       rootPath = __PATH_PREFIX__ + `/`
 
     }
+
+    console.log("ARE WE USING LANDING PAGE", useLandingBoolean);
 
     const siteTitle = get(this, 'props.data.site.siteMetadata.title');
     const metadata = get(this, 'props.data.site.siteMetadata.description');
@@ -30,7 +33,7 @@ class Template extends React.Component {
     const templateBody = (props) => {
       return (
         <body style={props}>
-          <Navigation />
+          <Navigation landing={landing} useLandingBoolean={useLandingBoolean} />
           <Container>
             {children}
           </Container>

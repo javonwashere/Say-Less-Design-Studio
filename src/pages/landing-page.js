@@ -3,27 +3,23 @@ import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
 import Header from '../components/sayless/header/header'
-import Landing from '../components/sayless/landing/landing'
 import Specialties from '../components/sayless/index/specialties/specialties'
 import FeaturedWorks from '../components/sayless/index/featured-works/featured-works'
 import HomeSlideshow from '../components/sayless/index/home-slideshow/home-slideshow'
-import openGraphImg from '../assets/icons/say-less-image-graph.jpg'
+import openGraphImg from "../assets/icons/say-less-image-graph.jpg"
 import Layout from '../components/layout'
 import '../pages/index.css'
 
+
+
 class RootIndex extends React.Component {
   render() {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const metadata = get(this, 'props.data.site.siteMetadata.description')
+    const siteTitle = get(this, 'props.data.site.siteMetadata.title');
+    const metadata = get(this, 'props.data.site.siteMetadata.description');
     console.log(metadata)
-    const posts = get(this, 'props.data.allContentfulBlogPost.edges')
-    const headerText = get(
-      this,
-      'props.data.allContentfulHomePageText.nodes[0].title.title'
-    )
-    const landing = get(this, 'props.data.allContentfulLanding.nodes[0]')
-    const { useLandingPage }  = landing;
-    let useLandingBoolean = useLandingPage;
+    const posts = get(this, 'props.data.allContentfulBlogPost.edges');
+    const headerText = get(this, 'props.data.allContentfulHomePageText.nodes[0].title.title');
+
     return (
       <div>
         {/* <Helmet title={siteTitle} defer={false}>
@@ -39,24 +35,12 @@ class RootIndex extends React.Component {
           <meta name='twitter:card' content={`https://sayless.studio${openGraphImg}`} />
           <meta name='twitter:site' content="@theolivewave" />
         </Helmet> */}
-        <Layout landing={landing} useLandingBoolean={useLandingBoolean} location={this.props.location}>
-          <div
-            style=
-            {{
-              background: '#fff',
-              display: 'flex',
-              flexDirection: 'column',
-            }} >
-            {useLandingBoolean === true ? (
-              <Landing landing={landing} />
-            ) : (
-              <React.Fragment>
-                <Header headerText={headerText} noFade />
-                <HomeSlideshow />
-                <Specialties />
-                <FeaturedWorks />
-              </React.Fragment>
-            )}
+        <Layout location={this.props.location} >
+          <div style={{ background: '#fff', display: 'flex', flexDirection: 'column' }}>
+            <Header headerText={headerText} noFade />
+            <HomeSlideshow />
+            <Specialties />
+            <FeaturedWorks />
           </div>
         </Layout>
       </div>
@@ -67,7 +51,7 @@ class RootIndex extends React.Component {
 export default RootIndex
 
 export const pageQuery = graphql`
-  query HomeQuery {
+  query LandingQuery {
     site {
       siteMetadata {
         title
@@ -84,7 +68,7 @@ export const pageQuery = graphql`
           tags
           heroImage {
             fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
-              ...GatsbyContentfulFluid
+             ...GatsbyContentfulFluid 
             }
           }
           description {
@@ -110,25 +94,10 @@ export const pageQuery = graphql`
               resizingBehavior: PAD
               background: "rgb:000000"
             ) {
-              ...GatsbyContentfulFluid
+              ...GatsbyContentfulFluid 
             }
           }
         }
-      }
-    }
-    allContentfulLanding {
-      nodes {
-        contactLinkOne
-        contactLinkTwo
-        contactTitleOne
-        contactTitleTwo
-        headlineOne
-        headlineTwo
-        title
-        text {
-          text
-        }
-        useLandingPage
       }
     }
     allContentfulHomePageText {
