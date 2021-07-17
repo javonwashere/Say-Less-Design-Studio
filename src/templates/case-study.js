@@ -26,8 +26,9 @@ class CaseStudy extends React.Component {
       const constructedParagraphs = paragraphs
         .replace(boldRegex, convertBoldCharacters)
         .split("\n\n");
-      return constructedParagraphs.map(p =>
+      return constructedParagraphs.map((p, index) =>
         <p
+          key={index}
           className="client-info-text"
           dangerouslySetInnerHTML={{ __html: p }}
         />
@@ -45,9 +46,9 @@ class CaseStudy extends React.Component {
       const serviceListGroups = serviceTypes.map((serviceType, index) => {
         const service = serviceType[0].replace(/([A-Z])/g, ' $1').trim();
         const serviceCapped = service.charAt(0).toUpperCase() + service.slice(1)
-        const serviceCategories = serviceType[1].map(category => {
+        const serviceCategories = serviceType[1].map((category, i) => {
           const categoryItems = serviceType[1].length != 0 ?
-            <li className="client-info-category"><span>{category}</span></li> : <li></li>;
+            <li key={i+" key"} className="client-info-category"><span>{category}</span></li> : <li></li>;
           return (
             <React.Fragment>
               {categoryItems}
@@ -57,7 +58,7 @@ class CaseStudy extends React.Component {
 
         return (
           <React.Fragment>
-            <li className={`client-info-details`} onClick={toggleList}>{serviceCapped}{" +"}
+            <li key={index+" React"} className={`client-info-details`} onClick={toggleList}>{serviceCapped}{" +"}
               {this.state.isToggled && <ul>{serviceCategories}</ul>}
             </li>
           </React.Fragment>
@@ -70,6 +71,7 @@ class CaseStudy extends React.Component {
 
     const caseStudy = get(this.props, 'data.contentfulCaseStudy')
     const { client, story, heroImage, services, modules } = caseStudy;
+    console.log("MODULES", modules);
     return (
       <Layout location={this.props.location} >
         <div className="case-study-wrapper" style={{ background: '#fff', marginBottom: '6vh' }}>

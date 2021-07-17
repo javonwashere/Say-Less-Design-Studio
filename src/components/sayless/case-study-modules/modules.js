@@ -10,6 +10,7 @@ export default ({ props, name }) => {
     const allModules = props.map((module) => {
         const typeName = module.internal != null ? module.internal.type : "default";
         console.log("TYPE NAME:", typeName);
+        console.log("GIVE ME THE MODULE", typeName === "ContentfulImageSlideshow" && module);
         let content = <div></div>;
         switch (typeName) {
             case "ContentfulImage":
