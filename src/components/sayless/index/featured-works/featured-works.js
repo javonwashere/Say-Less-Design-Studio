@@ -72,7 +72,7 @@ const works = (collectionOfWorks) => {
   return (
     <div className="feat-table">
       <div className="work-rows" ref={imageContainer}>
-        {imagesArray[index] && <Img className="work-image" fluid={imagesArray[index].featuredImage} />}
+=        {imagesArray[index].featuredImage.fluid && <Img className="work-image" fluid={imagesArray[index].featuredImage.fluid} />}
         {workRows}
       </div>
     </div>
