@@ -6,9 +6,7 @@ import {Spring} from "react-spring/renderprops-universal";
 
 export default ({ person, handleRightClick, handleLeftClick }) =>  {
 
-  console.log("Show the person", person);
   const nameObj = person.node.name.split(" ");
-  console.log(nameObj);
 
   // this function splits the first and last name onto separate lines
   const firstAndLastName = nameObj =>

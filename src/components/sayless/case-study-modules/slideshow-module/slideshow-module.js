@@ -6,13 +6,7 @@ import numericalSlideshow from './numerical-slideshow/numerical-slideshow';
 import dragSlideshow from './drag-slideshow/drag-slideshow';
 
 export default ({ props }) => {
-  // if (props.slideshowType === "A") {
-        // create numerical slideshow 
-        console.log("THIS SHOULD WORK WTF BRO", props.images);
-
     if(props.images) {
-
-    console.log("THIS SHOULD WORK WTF", props.images);
     const images = props.images.map(({ fluid }, key) => {
       return ({ style }) =>
         <animated.div className="slideshow-container" style={{ ...style, position: 'relative' }}>

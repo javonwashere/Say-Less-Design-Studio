@@ -12,7 +12,6 @@ import './work.css'
 
 class Works extends React.Component {
   render() {
-    // console.log(get(this, "props"));
     const caseStudiesData = get(this, "props.data.allContentfulCaseStudy.edges");
     console.log(caseStudiesData);
     const caseStudies = caseStudiesData.map(({ node }, index) => {
@@ -35,7 +34,6 @@ class Works extends React.Component {
 
 
 const caseStudy = ({ client, slug, heroImage }, key) => {
-  console.log("HERO!", heroImage);
   return (
     <div className="case-study">
       <div className="case-study-img-wrapper">

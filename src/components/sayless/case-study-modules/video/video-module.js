@@ -13,7 +13,6 @@ export default ({ props }) => {
 
 
 const generateVideo = ({ mute, autoPlay, video }) => {
-    console.log("autoPlay?", autoPlay)
     const width = 100;
     const position = "center";
 

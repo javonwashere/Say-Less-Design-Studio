@@ -19,10 +19,6 @@ import Inspo8 from '../assets/inspiration-images/Inspo-8.jpg'
 
 class Inspiration extends React.Component {
     render() {
-        // console.log(get(this, "props"));
-        // const caseStudiesData = get(this, "props.data.allContentfulCaseStudy.edges");
-        // console.log(caseStudiesData)
-
         return (
             <Layout>
                 <div className="inspiration-container">
@@ -68,22 +64,3 @@ class Inspiration extends React.Component {
 
 
 export default Inspiration;
-
-// export const pageQuery = graphql`
-// query {
-//         allContentfulCaseStudy {
-//         edges {
-//         node {
-//         client
-//           slug
-//           heroImage {
-//         fluid {
-//         ...GatsbyContentfulFluid 
-//       }
-//       }
-//     }
-//   }
-// }
-// }
-
-// `

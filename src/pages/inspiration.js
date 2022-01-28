@@ -12,24 +12,11 @@ import { divide } from 'lodash'
 
 class Inspiration extends React.Component {
   render() {
-    // console.log(get(this, "props"));
     const inspoPageData = get(
       this,
       'props.data.allContentfulInspirationPage.nodes[0]'
     )
     const { title, masonryGrid } = inspoPageData
-
-    console.log(masonryGrid)
-
-    const images = () => {
-      return masonryGrid.map(image => {
-        return (
-          // <Zoom>
-          <Img class="inspiration-zoom-class" fluid={image.fluid} />
-          // </Zoom>
-        )
-      })
-    }
 
     return (
       <Layout>
@@ -42,7 +29,13 @@ class Inspiration extends React.Component {
             className="my-masonry-grid"
             columnClassName="my-masonry-grid_column"
           >
-            {images()}
+            {masonryGrid.map((image) => {
+              return (
+                <Zoom>
+                  <Img class="inspiration-zoom-class" fluid={image.fluid} />
+                </Zoom>
+              )
+            })}
           </Masonry>
         </div>
       </Layout>
@@ -59,7 +52,7 @@ export const pageQuery = graphql`
         title
         masonryGrid {
           fluid {
-            ...GatsbyContentfulFluid 
+            ...GatsbyContentfulFluid
           }
         }
       }

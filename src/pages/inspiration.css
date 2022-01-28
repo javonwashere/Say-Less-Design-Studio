@@ -171,3 +171,8 @@
     cursor: -webkit-zoom-in;
     cursor: zoom-in;
   }
+
+  .gatsby-image-wrapper {
+      height: 100%;
+      width: 100%;
+  }
