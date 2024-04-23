@@ -101,5 +101,11 @@
   color: rgb(218,49,44);
 }
 
+.custom-img-style {
+  width: 50% !important;
+  height: auto !important;
+}
+
+
 
 
