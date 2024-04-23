@@ -91,6 +91,7 @@ const works = (collectionOfWorks) => {
         {imagesArray[index] && (
           <Img
             className="work-image"
+            style={{ width: '50% !important', height: 'auto' }}
             fluid={imagesArray[index].featuredImage.fluid}
           />
         )}
