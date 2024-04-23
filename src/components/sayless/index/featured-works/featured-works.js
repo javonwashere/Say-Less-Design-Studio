@@ -90,8 +90,7 @@ const works = (collectionOfWorks) => {
       <div className="work-rows" ref={imageContainer}>
         {imagesArray[index] && (
           <Img
-            className="work-image"
-            style={{ width: '50% !important', height: 'auto' }}
+            className="work-image custom-img-style"
             fluid={imagesArray[index].featuredImage.fluid}
           />
         )}
